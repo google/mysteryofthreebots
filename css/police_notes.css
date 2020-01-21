@@ -1,0 +1,41 @@
+.police-notes {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.police-notes__notebook {
+  flex: 1;
+}
+
+.police-notes__notebook__page__header {
+  color: #931010;
+  font-weight: normal;
+  font-size: 24px;
+  margin: 0;
+}
+
+.police-notes__notebook__page__header:not(:first-of-type) {
+  margin-top: 38px;
+}
+
+.police-notes__notebook__page__header::first-letter {
+  text-decoration: underline;
+}
+
+.police-notes__notebook__list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.police-notes__notebook__list.one-line
+.police-notes__notebook__list__item {
+  white-space: nowrap;
+}
+
+.police-notes__notebook__list__item {
+  line-height: 33px;
+}

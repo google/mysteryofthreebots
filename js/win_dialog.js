@@ -1,0 +1,6 @@
+class WinDialog {
+  constructor() {}
+
+  open() {
+  }
+}

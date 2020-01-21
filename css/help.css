@@ -1,0 +1,36 @@
+.dialog.help {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Avenir, sans-serif;
+}
+
+.help__header {
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.help__container {
+  margin: auto 0;
+  background: #fff;
+  border-radius: 10px;
+  padding: 80px;
+}
+
+.help__intro {
+  font-weight: 800;
+}
+
+.help__columns {
+  display: flex;
+}
+
+.help__column {
+  flex: 1;
+}
+
+.help__column + .help__column {
+  margin-left: 90px;
+}

@@ -1,0 +1,86 @@
+.dialog.solve {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.solve__notebook__page__header {
+  color: #931010;
+  font-weight: normal;
+  font-size: 24px;
+  margin: 0;
+}
+
+.solve__notebook__page__list-header {
+  white-space: nowrap;
+}
+
+.solve__notebook__page__list-header:not(:first-of-type) {
+  margin-top: 38px;
+}
+
+.solve__notebook__page__list-header::first-letter {
+  text-decoration: underline;
+}
+
+.solve__notebook__option-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.solve__notebook__option-list {
+  position: relative;
+}
+
+.solve__notebook__option {
+  display: none;
+}
+
+.solve__notebook__option ~ .solve__notebook__option-label::before {
+  content: "❍";
+  color: #000;
+}
+
+.solve__notebook__option:checked ~ .solve__notebook__option-label::after {
+  content: "✓";
+  position: absolute;
+  left: 0;
+}
+
+.solve__notebook__divider {
+  margin-top: 100px;
+  margin-left: -50px;
+}
+
+.solve__notebook__submit-theory-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.solve__notebook__submit-buttons {
+  display: flex;
+  margin-top: 14px;
+  align-self: center;
+}
+
+.solve__notebook__submit-button {
+  background: rgba(11, 69, 16, 0.85);
+  border: 2px solid rgba(65, 142, 72, 0.85);
+  box-shadow: 0 4px 9px rgba(0, 0, 0, 0.5);
+  margin-right: 20px;
+}
+
+.solve__notebook__cancel-button {
+  background: rgba(84, 5, 5, 0.85);
+  border: 2px solid rgba(148, 54, 33, 0.85);
+  box-shadow: 0 4px 9px rgba(0, 0, 0, 0.5);
+}
+
+.solve__notebook__max-submission-warning {
+  font-size: 18px;
+  margin-top: 31px;
+}
