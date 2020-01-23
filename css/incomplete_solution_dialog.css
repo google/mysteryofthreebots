@@ -1,20 +1,20 @@
-.dialog.incorrect-solution.open {
+.dialog.incomplete-solution.open {
   align-items: center;
   display: flex;
   justify-content: center;
 }
 
-.dialog.incorrect-solution .container {
+.dialog.incomplete-solution .container {
   background: #fff;
   border-radius: 10px;
   padding: 75px 85px 75px 105px;
 }
 
-.dialog.incorrect-solution .subject {
+.dialog.incomplete-solution .subject {
   font-weight: 900;
   font-size: 24px;
 }
 
-.dialog.incorrect-solution .comm-link-open {
+.dialog.incomplete-solution .comm-link-open {
   color: #5f6368;
 }

@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/notebook.css"/>
     <link rel="stylesheet" href="css/win_dialog.css"/>
     <link rel="stylesheet" href="css/incorrect_solution_dialog.css"/>
+    <link rel="stylesheet" href="css/incomplete_solution_dialog.css"/>
     <link
       href="https://fonts.googleapis.com/css?family=Architects+Daughter|Smythe|Spectral&display=swap"
       rel="stylesheet"/>
@@ -341,10 +342,6 @@
                   No
                 </button>
               </div>
-              <div class="solve__notebook__max-submission-warning">
-                Note: You can submit a theory <span class="solve__notebook__remaining-tries">three
-                more times</span>.
-              </div>
             </div>
           </div>
         </form>
@@ -446,9 +443,50 @@
         <img src="img/win-certificate.jpg" alt="Certificate of acheivement"/>
       </div>
       <div class="dialog incorrect-solution">
-        <p class="comm-link-open">
-          Black Hat Investigations Secure Communication Link Open
-        </p>
+        <div class="container">
+          <p class="comm-link-open">
+            Black Hat Investigations Secure
+            <br />
+            Communication Link Open
+          </p>
+          <h3 class="subject">
+            RE: OPEN CASE: MacGuffin Diamond -- Stolen
+          </h3>
+          <p>
+            <strong>
+              Detective, your solution is incorrect.
+            </strong>
+          </p>
+          <p>
+            Did we hire the right person for this job?
+          </p>
+        </div>
+      </div>
+      <div class="dialog incomplete-solution">
+        <div class="container">
+          <p class="comm-link-open">
+            Black Hat Investigations Secure
+            <br />
+            Communication Link Open
+          </p>
+          <h3 class="subject">
+            RE: OPEN CASE: MacGuffin Diamond -- Stolen
+          </h3>
+
+          <p>
+            <strong>
+              Detective, your solution is incomplete. Your solution needs to contain all three elements:
+            </strong>
+          </p>
+          <ol>
+            <li>What suspect stole the diamond?</li>
+            <li>In what room is the stolen diamond?</li>
+            <li>In what object is the diamond hidden</li>
+          </ol>
+          <p>
+            Did we hire the right person for this job?
+          </p>
+        </div>
       </div>
     </div>
     <script type="module" src="js/main.js"></script>

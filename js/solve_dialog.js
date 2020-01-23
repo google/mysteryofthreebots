@@ -5,29 +5,26 @@ export class SolveDialog {
       event.preventDefault();
       this.checkSolution_();
     }, true);
-    this.remainingTries_ = 3;
-    this.remainingTriesEl_ = this.root_
-        .querySelector('.solve__notebook__remaining-tries');
   }
 
-  openDialog_(dialogName) {
+  openDialog_(dialogName, closeOthers = true) {
     const dialogs = document.querySelectorAll('.dialog');
     for (const dialog of Array.from(dialogs)) {
-      if (dialog.classList.contains('dialogName')) {
+      if (dialog.classList.contains(dialogName)) {
         dialog.classList.add('open');
       }
-      else {
+      else if (closeOthers) {
         dialog.classList.remove('open');
       }
     }
   }
 
   checkSolution_() {
-    if (this.remainingTries_ === 0) {
-      return;
-    }
     const {who, room, container} = this.getFormData_();
-    if (
+    if (!who || !room || !container) {
+      this.openDialog_('incomplete-solution', false);
+    }
+    else if (
       who === 'Professor Pluot' &&
       room === 'Living Room' &&
       container === 'A Hollow Bible'
@@ -36,10 +33,7 @@ export class SolveDialog {
     }
     else {
       this.openDialog_('incorrect-solution');
-      alert(`No, that can't be right...try again`);
     }
-    this.remainingTries_ -= 1;
-    this.updateRemainingTries_();
   }
 
   getFormData_() {
@@ -58,28 +52,5 @@ export class SolveDialog {
           container.value :
           undefined,
     };
-  }
-
-  updateRemainingTries_() {
-    let numberString;
-    let triesString = 'times';
-
-    switch (this.remainingTries_) {
-      case 0:
-        numberString = 'zero';
-        break;
-      case 1:
-        numberString = 'one';
-        triesString = 'time';
-        break;
-      case 2:
-        numberString = "two";
-        break;
-      case 3:
-        numberString = "three";
-        break;
-    }
-
-    this.remainingTriesEl_.textContent = `${numberString} more ${triesString}`;
   }
 }
