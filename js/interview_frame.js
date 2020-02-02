@@ -14,6 +14,8 @@ See the License for the specific language governing permissions and
 limitations under the License.
  */
 
+import {getResponse} from './tf_model.js';
+
 export class InterviewFrame {
   constructor(root) {
     this.root = root;
@@ -23,17 +25,21 @@ export class InterviewFrame {
     this.input_ = this.root
         .querySelector('.chat-container__frame__input');
     this.sendQuestionButton_ = this.root
+
         .querySelector('.chat-container__frame__send-question-button');
+
     this.messagesEl_ = this.root
+
         .querySelector('.chat-container__frame__messages');
     this.messageList_ = this.root.querySelector(
         '.chat-container__frame__message-list');
     this.root.querySelector('.chat-container__frame__form')
         .addEventListener('submit', (event) => {
       event.preventDefault();
-      this.addMessage_(this.input_.value, true);
+      const message = this.input_.value;
       this.input_.value = '';
-      this.toggleSendQuestionButtonEnabled_()
+      this.toggleSendQuestionButtonEnabled_();
+      this.addMessage_(message, true);
     }, false);
 
     this.input_.addEventListener('input', () => {
@@ -44,9 +50,22 @@ export class InterviewFrame {
   addMessage_(message, isPlayer) {
     const div = document.getElementById('chat-message-template').content
         .cloneNode(true).firstElementChild;
-    const msgText = document.createTextNode(message);
+    let content;
+    if (message === null) {
+      content = document.createElement('div');
+      content.classList.add('chat-container__frame__message-list__message-waiting');
+      for (let i = 0; i < 3; i++) {
+        const span = document.createElement('span');
+        span.textContent = ".";
+        content.appendChild(span);
+      }
+    }
+    else {
+      content = document.createElement('span');
+      content.textContent = message;
+    }
     const itemEl = document.createElement('li');
-    div.firstElementChild.before(msgText);
+    div.firstElementChild.before(content);
     div.classList.add('chat-container__frame__message-list__message-text');
     itemEl.classList.add('chat-container__frame__message-list__message');
     if (isPlayer) {
@@ -62,20 +81,25 @@ export class InterviewFrame {
     this.scrollToBottom_();
 
     if (isPlayer) {
-      this.respondToMessage_(message);
+      const pendingMessage = this.addMessage_(null, false);
+      setTimeout(() => {
+        this.respondToMessage_(message, pendingMessage);
+      }, 0);
     }
+    return content;
   }
 
   scrollToBottom_() {
     this.messagesEl_.scrollTop = this.messagesEl_.scrollHeight;
   }
 
-  async respondToMessage_(message) {
-    const model = await getModel();
-    console.log(model);
-    const response = `I don't understand "${message}"`;
-    await new Promise((resolve) => setTimeout(resolve, 400));
-    this.addMessage_(response, false);
+  async respondToMessage_(message, messageContentEl) {
+    let response = await getResponse(message, this.botName.toLowerCase());
+    if (!response) {
+      response = 'I\'m sorry, I didn\'t understand that. Can you ask that another way?';
+    }
+    const textNode = document.createTextNode(response);
+    messageContentEl.parentNode.replaceChild(textNode, messageContentEl);
   }
 
   toggleSendQuestionButtonEnabled_() {

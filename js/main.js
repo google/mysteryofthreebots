@@ -16,6 +16,7 @@ limitations under the License.
 
 import {InterviewFrame} from './interview_frame.js';
 import {SolveDialog} from './solve_dialog.js';
+import {loadModels} from './tf_model.js';
 
 function initFrame_(frameEl, frameTemplate) {
   const frame = frameTemplate.content.cloneNode(true);
@@ -26,6 +27,10 @@ function initFrame_(frameEl, frameTemplate) {
 function init_() {
   const main = document.getElementById('main');
   const frameTemplate = main.querySelector('.templates__chat-frame');
+
+  loadModels().then(() => {
+    console.info('Finished loading models');
+  });
 
   Array.from(main.querySelectorAll('.chat-container__frame'))
       .forEach((el) => initFrame_(el, frameTemplate));
