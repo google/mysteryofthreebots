@@ -100,6 +100,7 @@ export class InterviewFrame {
     }
     const textNode = document.createTextNode(response);
     messageContentEl.parentNode.replaceChild(textNode, messageContentEl);
+    this.scrollToBottom_();
   }
 
   toggleSendQuestionButtonEnabled_() {
