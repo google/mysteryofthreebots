@@ -1,0 +1,15 @@
+.button {
+    background: #ebe1cd;
+    border: 2px solid rgba(148, 54, 33, 0.85);
+    border-radius: 4px;
+    font-family: 'Smythe', cursive;
+    font-size: 24px;
+    margin-right: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 9px rgba(0, 0, 0, 0.5);
+    width: 140px;
+}
+
+.button--small {
+    width: 90px;
+}
