@@ -26,23 +26,6 @@
   border: 2px solid #3c4043;
   padding-bottom: 24px;
 }
-
-.chat-container__frame[data-bot-name="Chef"]::before {
-  margin-top: -70px;
-  background: url(../img/chef.png) no-repeat;
-}
-
-.chat-container__frame[data-bot-name="Maid"]::before {
-  margin-top: -45px;
-  background: url(../img/maid.png) no-repeat;
-  background-size: 100%;
-}
-
-.chat-container__frame[data-bot-name="Butler"]::before {
-  margin-top: -80px;
-  background: url(../img/butler.png) no-repeat;
-}
-
 .chat-container__frame[data-bot-name]::before {
   content: "";
   display: block;
@@ -53,6 +36,25 @@
   right: 0;
   background-size: 100%;
 }
+
+.chat-container__frame[data-bot-name="Chef"]::before {
+  margin-top: -70px;
+  background: url(../img/chef.png) no-repeat;
+  background-size: 100%;
+}
+
+.chat-container__frame[data-bot-name="Maid"]::before {
+  margin-top: -45px;
+  background: url(../img/maid.png) no-repeat;
+  background-size: 82%;
+}
+
+.chat-container__frame[data-bot-name="Butler"]::before {
+  margin-top: -80px;
+  background: url(../img/butler.png) no-repeat;
+  background-size: 100%;
+}
+
 
 .chat-container__frame__bot-name {
   color: #fff;
@@ -79,6 +81,7 @@
 .chat-container__frame__input-container {
   margin-left: 24px;
   margin-right: 24px;
+  z-index: 1;
 }
 
 .chat-container__frame__message-list {
