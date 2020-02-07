@@ -1,13 +1,31 @@
 <div class="bot-name">
     {{botName}}
 </div>
-<div class="messages">
+<div class="messages" #messageContainer>
     <ul class="message-list">
+        <li *ngFor="let message of messages"
+            [ngClass]="{
+                'message': true,
+                'message--player': message.isPlayer,
+                'message--bot': !message.isPlayer
+            }">
+            <div class="message__message-text">
+                <div *ngIf="message.isWaiting" class="message--waiting">
+                    <span>.</span>
+                    <span>.</span>
+                    <span>.</span>
+                </div>
+                {{message.isWaiting ? null : message.text}}
+                <svg class="bubble-point" width="17" height="12" viewBox="0 0 17 12" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.17778 10.7012C3.4 8.48715 0.62963 3.81307 0 1.47603L9.82222 0C9.82222 0.492009 8.31111 5.16609 10.2 7.38013C12.8444 10.4798 14.7333 11.4392 17 11.8082C13.8519 11.8082 10.5567 12.6815 7.17778 10.7012Z" fill="currentColor"/>
+                </svg>
+            </div>
+        </li>
     </ul>
 </div>
 <div class="input-container">
-    <form class="form" (onSubmit)="handleQuestionSubmit">
-        <input type="text" class="input" (input)="handleQuestionInput($event)"/>
+    <form class="form" (submit)="handleQuestionSubmit($event)">
+        <input type="text" class="input" [value]="question" (input)="handleQuestionInput($event)"/>
         <button type="submit" class="send-question-button" [disabled]="!question">
             Send question
         </button>

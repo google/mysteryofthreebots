@@ -7,6 +7,9 @@ import { HomeComponent } from './home/home.component';
 import { InterviewPaneComponent } from './interview-pane/interview-pane.component';
 import { ChatComponent } from './chat/chat.component';
 import { NavButtonsComponent } from './nav-buttons/nav-buttons.component';
+import { HttpClientModule } from '@angular/common/http';
+import { DialogHostComponent } from './dialog-host/dialog-host.component';
+import { HelpDialogComponent } from './help-dialog/help-dialog.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +17,14 @@ import { NavButtonsComponent } from './nav-buttons/nav-buttons.component';
     HomeComponent,
     InterviewPaneComponent,
     ChatComponent,
-    NavButtonsComponent
+    NavButtonsComponent,
+    DialogHostComponent,
+    HelpDialogComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

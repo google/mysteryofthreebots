@@ -63,24 +63,29 @@
         margin-right: 24px;
         z-index: 1;
     }
-
+    
     .message-list {
         padding: 0;
         list-style-type: none;
-        &__message-waiting {
+    }
+    
+    .message {
+        margin-bottom: 10px;
+
+        &--waiting {
             transform: scale(2);
         }
         
-        &__message-waiting > span {
+        &--waiting > span {
             animation: chat-frame-message-waiting 1.4s infinite;
             animation-fill-mode: both;
         }
         
-        &__message-waiting > span:nth-child(2) {
+        &--waiting > span:nth-child(2) {
             animation-delay: 0.2s;
         }
         
-        &__message-waiting > span:nth-child(3) {
+        &--waiting > span:nth-child(3) {
             animation-delay: 0.4s;
         }
         
@@ -96,38 +101,34 @@
             position: absolute;
         }
         
-        &__message {
-            margin-bottom: 10px;
+        &--bot {
+            margin-right: 55px;
             
-            &--bot {
-                margin-right: 55px;
+            .message__message-text {
+                background-color: #fff;
+                color: #000;
                 
-                &__message-text {
-                    background-color: #fff;
-                    color: #000;
-                    
-                    .bubble-point {
-                        color: #fff;
-                        left: 25px;
-                        transform: rotateY(180deg);
-                    }
+                .bubble-point {
+                    color: #fff;
+                    left: 25px;
+                    transform: rotateY(180deg);
                 }
             }
+        }
+        
+        &--player {
+            margin-left: 55px;
+            text-align: right;
             
-            &--player {
-                margin-left: 55px;
-                text-align: right;
+            .message__message-text {
+                background-color: #2f80ed;
+                color: #fff;
                 
-                &__message-text {
-                    background-color: #2f80ed;
-                    color: #fff;
-                    
-                    .bubble-point {
-                        color: #2f80ed;
-                        right: 25px;
-                    }
-                    
+                .bubble-point {
+                    color: #2f80ed;
+                    right: 25px;
                 }
+                
             }
         }
     }

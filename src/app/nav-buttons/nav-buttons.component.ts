@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { DialogService } from '../dialog.service';
 
 @Component({
   selector: 'app-nav-buttons',
   templateUrl: './nav-buttons.component.html',
   styleUrls: ['./nav-buttons.component.scss']
 })
-export class NavButtonsComponent implements OnInit {
+export class NavButtonsComponent {
+  constructor(private readonly dialogService: DialogService) { }
 
-  constructor() { }
-
-  ngOnInit() {
+  handleHelpClick() {
+    this.dialogService.open('app-help-dialog');
   }
-
 }
