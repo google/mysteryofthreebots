@@ -10,6 +10,10 @@ import { NavButtonsComponent } from './nav-buttons/nav-buttons.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DialogHostComponent } from './dialog-host/dialog-host.component';
 import { HelpDialogComponent } from './help-dialog/help-dialog.component';
+import { HowDialogComponent } from './how-dialog/how-dialog.component';
+import { NotesDialogComponent } from './notes-dialog/notes-dialog.component';
+import { MapDialogComponent } from './map-dialog/map-dialog.component';
+import { SolveDialogComponent } from './solve-dialog/solve-dialog.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,11 @@ import { HelpDialogComponent } from './help-dialog/help-dialog.component';
     ChatComponent,
     NavButtonsComponent,
     DialogHostComponent,
-    HelpDialogComponent
+    HelpDialogComponent,
+    HowDialogComponent,
+    NotesDialogComponent,
+    MapDialogComponent,
+    SolveDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +35,13 @@ import { HelpDialogComponent } from './help-dialog/help-dialog.component';
     HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    HelpDialogComponent,
+    HowDialogComponent,
+    NotesDialogComponent,
+    MapDialogComponent,
+    SolveDialogComponent,
+  ],
 })
 export class AppModule { }

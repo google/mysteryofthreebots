@@ -1,1 +1,3 @@
-<div id="dialog-host" class="dialog-host"></div>
+<div class="app-dialog-backdrop" id="app-dialog-backdrop" #backdrop (click)="handleBackdropClick($event)">
+    <div class="app-dialog" id="app-dialog" #dialog></div>
+</div>
