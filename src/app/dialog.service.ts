@@ -8,7 +8,8 @@ import {
   ApplicationRef,
   EmbeddedViewRef,
   ComponentRef,
-  EventEmitter
+  EventEmitter,
+  Type
 } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 
@@ -19,7 +20,7 @@ export class DialogService {
   private readonly renderer: Renderer2;
   private dialog: HTMLElement;
   private backdrop: HTMLElement;
-  private readonly componentCache = new Map<new () => void, ComponentRef<void>>();
+  private readonly componentCache = new Map<Type<any>, ComponentRef<void>>();
 
   constructor(
     rendererFactory: RendererFactory2,
@@ -31,7 +32,7 @@ export class DialogService {
     this.renderer = rendererFactory.createRenderer(null, null);
   }
 
-  open(component: new () => void) {
+  open(component: Type<any>) {
     let componentRef = this.componentCache.get(component);
     if (!componentRef) {
       const componentFactory = this.resolver.resolveComponentFactory(component);
