@@ -1,11 +1,12 @@
-
 :host {
+    display: block;
     margin: auto 0;
     background: #fdf2de;
-    border: 10px solid #fdf2de;
     border-radius: 10px;
-    width: 80vw;
-    height: 80vh;
+    max-width: 80vw;
+    max-height: 80vh;
+    // max-width: 100%;
+    // max-height: 100%;
     
     .map {
         border-radius: 10px;

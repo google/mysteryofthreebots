@@ -1,15 +1,11 @@
-
 :host {
-    margin: auto 0;
     background: #fdf2de;
-    border: 10px solid #fdf2de;
     border-radius: 10px;
-    width: 80vw;
+    display: block;
     height: 80vh;
     
     .certificate {
         border-radius: 10px;
-        display: block;
-        width: 100%;
+        height: 100%;
     }
 }

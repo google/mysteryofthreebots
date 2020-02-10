@@ -8,6 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "gcp-build": "npm run build",
     "generate-models": "node ./generate_models.js"
   },
   "private": true,
