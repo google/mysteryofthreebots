@@ -1,0 +1,21 @@
+  .option-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.option {
+    display: none;
+}
+
+.option ~ .option-label::before {
+    content: "❍";
+    color: #000;
+}
+
+.option:checked ~ .option-label::after {
+    content: "✓";
+    position: absolute;
+    left: 0;
+}

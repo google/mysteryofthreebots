@@ -14,6 +14,10 @@ import { HowDialogComponent } from './how-dialog/how-dialog.component';
 import { NotesDialogComponent } from './notes-dialog/notes-dialog.component';
 import { MapDialogComponent } from './map-dialog/map-dialog.component';
 import { SolveDialogComponent } from './solve-dialog/solve-dialog.component';
+import { RadioListComponent } from './radio-list/radio-list.component';
+import { WinDialogComponent } from './win-dialog/win-dialog.component';
+import { IncorrectSolutionDialogComponent } from './incorrect-solution-dialog/incorrect-solution-dialog.component';
+import { IncompleteSolutionDialogComponent } from './incomplete-solution-dialog/incomplete-solution-dialog.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,11 @@ import { SolveDialogComponent } from './solve-dialog/solve-dialog.component';
     HowDialogComponent,
     NotesDialogComponent,
     MapDialogComponent,
-    SolveDialogComponent
+    SolveDialogComponent,
+    RadioListComponent,
+    WinDialogComponent,
+    IncorrectSolutionDialogComponent,
+    IncompleteSolutionDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +50,9 @@ import { SolveDialogComponent } from './solve-dialog/solve-dialog.component';
     NotesDialogComponent,
     MapDialogComponent,
     SolveDialogComponent,
+    WinDialogComponent,
+    IncompleteSolutionDialogComponent,
+    IncorrectSolutionDialogComponent,
   ],
 })
 export class AppModule { }

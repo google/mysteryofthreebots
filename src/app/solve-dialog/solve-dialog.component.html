@@ -1,1 +1,41 @@
-<p>solve-dialog works!</p>
+<form class="notebook solve__notebook" (submit)="handleSubmit($event)">
+    <div class="notebook-page page page1">
+        <h3 class="page__header page__list-header">
+            Who stole the diamond?
+        </h3>
+        <app-radio-list name="who" [options]="whoOptions"></app-radio-list>
+        
+        <h3 class="page__header page__list-header">
+            What room is it in?
+        </h3>
+        <app-radio-list name="what-room" [options]="roomOptions"></app-radio-list>
+    </div>
+    <div class="notebook-page page page2">
+        <h3 class="page__header page__list-header">
+            What container is it in?
+        </h3>
+        <app-radio-list name="what-container" [options]="containerOptions"></app-radio-list>
+        <svg
+            class="divider"
+            width="456"
+            height="9"
+            viewBox="0 0 456 9"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.65186 3.91205C41.7151 3.64044 81.495 1.68497 121.599 2.95776C182.25 4.88265 242.877 9.16425 303.575 7.06855C330.908 6.12482 358.146 2.7431 385.497 2.59073C397.092 2.52613 408.968 1.85563 420.476 3.58172C429.318 4.90806 437.264 4.31919 445.911 2.26039C448.776 1.57839 451.933 1.93006 454.867 1.93006" stroke="black" stroke-opacity="0.45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="submit-theory-container">
+            <h3 class="page__header">
+                Submit your theory to the agency?
+            </h3>
+            <div class="submit-buttons">
+                <button class="button submit-button" type="submit">
+                    Yes
+                </button>
+                <button type="button" class="button cancel-button">
+                    No
+                </button>
+            </div>
+        </div>
+    </div>
+</form>

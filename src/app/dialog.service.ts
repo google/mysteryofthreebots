@@ -11,21 +11,6 @@ import {
   EventEmitter
 } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
-import { HelpDialogComponent } from './help-dialog/help-dialog.component';
-import { HowDialogComponent } from './how-dialog/how-dialog.component';
-import { NotesDialogComponent } from './notes-dialog/notes-dialog.component';
-import { MapDialogComponent } from './map-dialog/map-dialog.component';
-import { SolveDialogComponent } from './solve-dialog/solve-dialog.component';
-
-export type DialogId = 'Help'|'How'|'Notes'|'Map'|'Solve';
-
-const DIALOG_COMPONENTS: {[id in DialogId]: new () => {}} = {
-  Help: HelpDialogComponent,
-  How: HowDialogComponent,
-  Notes: NotesDialogComponent,
-  Map: MapDialogComponent,
-  Solve: SolveDialogComponent,
-};
 
 @Injectable({
   providedIn: 'root'
@@ -34,14 +19,7 @@ export class DialogService {
   private readonly renderer: Renderer2;
   private dialog: HTMLElement;
   private backdrop: HTMLElement;
-
-  private readonly componentsById: {[id in DialogId]: ComponentRef<any>} = {
-    Help: null,
-    How: null,
-    Notes: null,
-    Map: null,
-    Solve: null,
-  };
+  private readonly componentCache = new Map<new () => void, ComponentRef<void>>();
 
   constructor(
     rendererFactory: RendererFactory2,
@@ -53,11 +31,12 @@ export class DialogService {
     this.renderer = rendererFactory.createRenderer(null, null);
   }
 
-  open(component: DialogId) {
-    let componentRef = this.componentsById[component];
+  open(component: new () => void) {
+    let componentRef = this.componentCache.get(component);
     if (!componentRef) {
-      const componentFactory = this.resolver.resolveComponentFactory(DIALOG_COMPONENTS[component]);
+      const componentFactory = this.resolver.resolveComponentFactory(component);
       componentRef = componentFactory.create(this.injector);
+      this.componentCache.set(component, componentRef);
       this.appRef.attachView(componentRef.hostView);
       const closeDialog = (componentRef.instance as any).closeDialog;
       if (closeDialog && closeDialog instanceof EventEmitter) {
