@@ -1,0 +1,43 @@
+runtime: nodejs10
+
+default_expiration: "30d"
+
+handlers:
+- url: /(.*\.css)
+  mime_type: text/css
+  static_files: dist/\1
+  upload: dist/(.*\.css)
+
+- url: /(.*\.html)
+  mime_type: text/html
+  static_files: dist/\1
+  upload: dist/(.*\.html)
+  expiration: "1h"
+
+- url: /(.*\.ico)
+  mime_type: image/x-icon
+  static_files: dist/\1
+  upload: dist/(.*\.ico)
+  expiration: "7d"
+
+- url: /(.*\.js)
+  mime_type: text/javascript
+  static_files: dist/\1
+  upload: dist/(.*\.js)
+
+- url: /(.*\.json)
+  mime_type: application/json
+  static_files: dist/\1
+  upload: dist/(.*\.json)
+  expiration: "1h"
+
+# image files
+- url: /(.*\.(bmp|gif|ico|jpeg|jpg|png))
+  static_files: dist/\1
+  upload: dist/(.*\.(bmp|gif|ico|jpeg|jpg|png))
+
+# site root
+- url: /
+  static_files: dist/index.html
+  upload: dist/index.html
+  expiration: "15m"
