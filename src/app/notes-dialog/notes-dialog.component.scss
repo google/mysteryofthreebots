@@ -1,0 +1,33 @@
+@import "../../styles/notebook";
+
+:host {
+  .page__header {
+    color: #931010;
+    font-weight: normal;
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .page__header:not(:first-of-type) {
+    margin-top: 38px;
+  }
+  
+  .page__header::first-letter {
+    text-decoration: underline;
+  }
+  
+  .list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  
+  .list.one-line
+  .list__item {
+    white-space: nowrap;
+  }
+  
+  .list__item {
+    line-height: 33px;
+  }
+}

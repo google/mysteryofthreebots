@@ -1,0 +1,56 @@
+@import '../../styles/notebook';
+@import '../../styles/buttons';
+
+.page__header {
+    color: #931010;
+    font-weight: normal;
+    font-size: 24px;
+    margin: 0;
+}
+
+.page__list-header {
+    white-space: nowrap;
+}
+
+.page__list-header:not(:first-of-type) {
+    margin-top: 38px;
+}
+
+.page__list-header::first-letter {
+    text-decoration: underline;
+}
+
+.divider {
+    margin-top: 100px;
+    margin-left: -50px;
+}
+
+.submit-theory-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.submit-buttons {
+    display: flex;
+    margin-top: 14px;
+    align-self: center;
+}
+
+.submit-button {
+    background: rgba(11, 69, 16, 0.85);
+    border: 2px solid rgba(65, 142, 72, 0.85);
+    box-shadow: 0 4px 9px rgba(0, 0, 0, 0.5);
+    margin-right: 20px;
+}
+
+.cancel-button {
+    background: rgba(84, 5, 5, 0.85);
+    border: 2px solid rgba(148, 54, 33, 0.85);
+    box-shadow: 0 4px 9px rgba(0, 0, 0, 0.5);
+}
+
+.max-submission-warning {
+    font-size: 18px;
+    margin-top: 31px;
+}

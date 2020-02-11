@@ -1,0 +1,20 @@
+:host {
+    z-index: 1;
+
+    .app-dialog-backdrop {
+        display: none;
+        z-index: 1000;
+
+        &.is-open {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba($color: #000000, $alpha: 0.4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

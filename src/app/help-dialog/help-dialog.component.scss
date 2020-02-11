@@ -1,0 +1,30 @@
+:host {
+    margin: auto 0;
+    background: #fff;
+    border-radius: 10px;
+    padding: 80px;
+    display: block;
+    max-width: 90vw;
+    max-height: 80vh;
+
+    .header {
+        font-size: 24px;
+        font-weight: 900;
+    }
+    
+    .intro {
+        font-weight: 800;
+    }
+    
+    .columns {
+        display: flex;
+    }
+    
+    .column {
+        flex: 1;
+    }
+    
+    .column + .column {
+        margin-left: 90px;
+    }
+}

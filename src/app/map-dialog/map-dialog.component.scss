@@ -1,0 +1,16 @@
+:host {
+    display: block;
+    margin: auto 0;
+    background: #fdf2de;
+    border-radius: 10px;
+    max-width: 80vw;
+    max-height: 80vh;
+    // max-width: 100%;
+    // max-height: 100%;
+    
+    .map {
+        border-radius: 10px;
+        display: block;
+        width: 100%;
+    }
+}

@@ -1,0 +1,14 @@
+<ul class="option-list">
+    <li *ngFor="let option of options; index as i">
+        <input
+            type="radio"
+            class="option"
+            [name]="name"
+            id="option__{{name}}_{{i}}"
+            [value]="option"
+        />
+        <label class="option-label" for="option__{{name}}_{{i}}">
+            {{option}}
+        </label>
+    </li>
+</ul>

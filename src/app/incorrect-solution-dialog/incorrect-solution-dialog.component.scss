@@ -1,0 +1,15 @@
+:host {
+    display: block;
+    background: #fff;
+    border-radius: 10px;
+    padding: 75px 85px 75px 105px;
+    
+    .subject {
+        font-weight: 900;
+        font-size: 24px;
+    }
+    
+    .comm-link-open {
+        color: #5f6368;
+    }
+}

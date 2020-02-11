@@ -1,0 +1,17 @@
+@import '../../styles/buttons';
+
+:host {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  
+  .button-group {
+    display: flex;
+
+    &--help-how {
+      position: absolute;
+      right: 0;
+    }
+  }
+  
+}  
