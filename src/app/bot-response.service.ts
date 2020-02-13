@@ -25,6 +25,13 @@ export class BotResponseService {
   private readonly modelPromisesByBotName = {};
   private loadModelsPromise?: Promise<IModelFetchResult[]>;
   private minimumScore = 0.68;
+  private readonly statesByBotName: {
+    [botName: string]: string|null;
+  } = {
+    maid: null,
+    butler: null,
+    chef: 'initial',
+  };
 
   constructor(private http: HttpClient) { }
 
@@ -44,8 +51,9 @@ export class BotResponseService {
     }
     return this.loadModelsPromise;
   }
-  async getResponse(query: string, botName: BotName) {
-    const {queryMap, embeddingMap} = await this.modelPromisesByBotName[botName.toLowerCase()];
+  async getResponse(query: string, botName: string) {
+    botName = botName.toLowerCase() as BotName;
+    const {queryMap, embeddingMap} = await this.modelPromisesByBotName[botName];
     const model = await this.modelPromise;
     const queryEmbedding = await model.embed([query]);
     const queryArrays = await queryEmbedding.array();
@@ -66,8 +74,38 @@ export class BotResponseService {
         // tslint:disable-next-line: no-console
         console.info('Ignoring match because its score is below the threshhold of ' + this.minimumScore);
       }
+      let queryKeyPair = [null];
+      let match: {
+        NewState?: string;
+        Response: string;
+      };
+      if (bestMatch) {
+        queryKeyPair = [bestMatch];
+
+        if (this.statesByBotName[botName]) {
+          queryKeyPair.push(this.statesByBotName[botName]);
+        }
+        match = queryMap[JSON.stringify(queryKeyPair)];
+        if (match) {
+          if (match.NewState) {
+            this.statesByBotName[botName] = match.NewState;
+          }
+          return match.Response;
+        }
+      }
+      queryKeyPair[0] = null;
+      if (this.statesByBotName[botName]) {
+        queryKeyPair.push(this.statesByBotName[botName]);
+      }
+      match = queryMap[JSON.stringify(queryKeyPair)];
+      if (match) {
+        if (match.NewState) {
+          this.statesByBotName[botName] = match.NewState;
+        }
+        return match.Response;
+      }
       return undefined;
     }
-    return queryMap[bestMatch];
+    return queryMap[bestMatch].Response;
   }
 }
