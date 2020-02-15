@@ -94,6 +94,7 @@
     
     .message {
         margin-bottom: 10px;
+        overflow-wrap: anywhere;
         
         &--waiting {
             transform: scale(2);
