@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BotResponseService } from './bot-response.service';
+import { DialogService } from './dialog.service';
+import { HelpDialogComponent } from './help-dialog/help-dialog.component';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +11,10 @@ import { BotResponseService } from './bot-response.service';
 export class AppComponent implements OnInit {
   title = 'mysterybot';
 
-  constructor(private botResponseService: BotResponseService) {}
+  constructor(
+    private botResponseService: BotResponseService,
+    private readonly dialogService: DialogService
+  ) {}
 
   ngOnInit() {
     this.botResponseService.loadModels().then(
@@ -18,5 +23,6 @@ export class AppComponent implements OnInit {
         console.info('Finished loading models');
       }
     );
+    this.dialogService.open(HelpDialogComponent);
   }
 }
