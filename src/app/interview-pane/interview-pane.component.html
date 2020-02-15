@@ -25,7 +25,13 @@
 </div>
 <div class="input-container">
     <form class="form" (submit)="handleQuestionSubmit($event)">
-        <input type="text" class="input" [value]="question" (input)="handleQuestionInput($event)"/>
+        <input
+            type="text"
+            class="input"
+            placeholder="Type here to ask a question"
+            [value]="question"
+            (input)="handleQuestionInput($event)"
+        />
         <button type="submit" class="send-question-button" [disabled]="!question">
             Send question
         </button>
