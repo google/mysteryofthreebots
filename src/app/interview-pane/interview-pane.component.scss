@@ -71,8 +71,6 @@
     
     .messages {
         flex: 1;
-        font-family: 'Spectral', serif;
-        font-size: 14px;
         overflow-y: auto;
     }
     
@@ -81,6 +79,12 @@
         margin-left: 24px;
         margin-right: 24px;
         z-index: 1;
+    }
+    
+    .messages,
+    .input {
+        font-size: 16px;
+        font-family: 'Spectral', serif;
     }
     
     .message-list {
