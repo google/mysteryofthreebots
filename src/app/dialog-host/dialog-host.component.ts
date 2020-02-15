@@ -16,4 +16,8 @@ export class DialogHostComponent {
       this.dialogService.close();
     }
   }
+
+  handleCloseClick() {
+    this.dialogService.close();
+  }
 }

@@ -1,3 +1,5 @@
+@import '../../styles/buttons';
+
 :host {
     z-index: 1;
 
@@ -15,6 +17,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
         }
+    }
+
+    .close-button {
+        margin-top: 30px;
     }
 }
