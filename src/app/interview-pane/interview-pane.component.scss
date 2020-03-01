@@ -110,17 +110,29 @@
         display: flex;
         flex: 1;
         flex-direction: column;
+        overflow: hidden;
     }
     
     .messages {
-        flex: 1;
+        margin-top: 60px;
         overflow-y: auto;
+        flex: 1;
+
+        &:not(.at-top) {
+            mask-image: linear-gradient(to bottom, transparent 0%, black 10%);
+        }
+
+        &:not(.at-bottom) {
+            mask-image: linear-gradient(to top, transparent 0%, black 10%);
+        }
+
+        &:not(.at-top):not(.at-bottom) {
+            mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent);
+        }
     }
     
     .messages,
     .input-container {
-        margin-left: 24px;
-        margin-right: 24px;
         z-index: 1;
     }
     

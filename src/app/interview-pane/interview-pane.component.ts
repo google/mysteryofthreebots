@@ -1,4 +1,4 @@
-import { Component, Input, HostBinding, ElementRef, ViewChild, AfterViewChecked } from '@angular/core';
+import { Component, Input, HostBinding, ElementRef, ViewChild, AfterViewChecked, AfterViewInit, OnDestroy } from '@angular/core';
 import { BotResponseService, BotName } from '../bot-response.service';
 
 interface IMessage {
@@ -7,24 +7,66 @@ interface IMessage {
   isWaiting?: boolean;
 }
 
+let arePassiveListenersSupported = false;
+
+try {
+  window.addEventListener('test', null,
+    Object.defineProperty(
+      {},
+      'passive',
+      {
+        get() {
+          arePassiveListenersSupported = true;
+        }
+      }
+    )
+  );
+} catch (err) {}
+
 @Component({
   selector: 'app-interview-pane',
   templateUrl: './interview-pane.component.html',
   styleUrls: ['./interview-pane.component.scss']
 })
-export class InterviewPaneComponent implements AfterViewChecked {
+export class InterviewPaneComponent implements AfterViewChecked, AfterViewInit, OnDestroy {
   @ViewChild('messageContainer', {static: false}) private scrollContainer: ElementRef;
   @HostBinding('attr.data-bot-name') @Input() botName: BotName;
   question = '';
   messages: IMessage[] = [];
   private shouldScroll = false;
 
-  constructor(private botResponseService: BotResponseService) { }
+  constructor(private botResponseService: BotResponseService) {
+    this.handleScroll = this.handleScroll.bind(this);
+  }
 
   ngAfterViewChecked() {
     if (this.shouldScroll) {
-      this.scrollContainer.nativeElement.scrollTop = this.scrollContainer.nativeElement.scrollHeight;
+      setTimeout(() => {
+        this.scrollContainer.nativeElement.scrollTop = this.scrollContainer.nativeElement.scrollHeight;
+        this.toggleScrollClasses();
+      }, 0);
+      this.shouldScroll = false;
     }
+  }
+
+  ngAfterViewInit() {
+    this.scrollContainer.nativeElement.addEventListener(
+      'scroll',
+      this.handleScroll,
+      arePassiveListenersSupported ?
+        {
+          passive: true,
+        } :
+        false
+    );
+  }
+
+  ngOnDestroy() {
+    this.scrollContainer.nativeElement.removeEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll() {
+    this.toggleScrollClasses();
   }
 
   handleQuestionSubmit(event: any) {
@@ -66,5 +108,17 @@ export class InterviewPaneComponent implements AfterViewChecked {
 
   private scrollToBottom() {
     this.shouldScroll = true;
+  }
+
+  private toggleScrollClasses() {
+    this.scrollContainer.nativeElement.classList.toggle(
+      'at-top',
+      this.scrollContainer.nativeElement.scrollTop === 0
+    );
+    this.scrollContainer.nativeElement.classList.toggle(
+      'at-bottom',
+      this.scrollContainer.nativeElement.scrollTop +
+        this.scrollContainer.nativeElement.clientHeight >= this.scrollContainer.nativeElement.scrollHeight
+    );
   }
 }
