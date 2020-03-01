@@ -19,21 +19,21 @@
     }
     
     &[data-bot-name="Chef"]::before {
-        margin-top: -110px;
+        margin-top: -155px;
         background: url(../../assets/images/chef.png) no-repeat;
-        background-size: 100%;
+        background-size: 70%;
     }
     
     &[data-bot-name="Maid"]::before {
         margin-top: -120px;
         background: url(../../assets/images/maid.png) no-repeat;
-        background-size: 82%;
+        background-size: 60%;
     }
     
     &[data-bot-name="Butler"]::before {
         margin-top: -125px;
         background: url(../../assets/images/butler.png) no-repeat;
-        background-size: 100%;
+        background-size: 80%;
     }
     
     $padding: 10px;
@@ -127,7 +127,7 @@
     .messages,
     .input {
         font-size: 16px;
-        font-family: 'Spectral', serif;
+        font-family: Roboto, serif;
     }
     
     .message-list {
