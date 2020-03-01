@@ -17,4 +17,15 @@
     .text {
         font-size: 18px;
     }
+
+    .link {
+        color: #8ab4f8;
+
+        &,
+        &:hover,
+        &:active,
+        &:visited {
+            text-decoration: none;
+        }
+    }
 }
