@@ -18,6 +18,7 @@ import { RadioListComponent } from './radio-list/radio-list.component';
 import { WinDialogComponent } from './win-dialog/win-dialog.component';
 import { IncorrectSolutionDialogComponent } from './incorrect-solution-dialog/incorrect-solution-dialog.component';
 import { IncompleteSolutionDialogComponent } from './incomplete-solution-dialog/incomplete-solution-dialog.component';
+import { WelcomeDialogComponent } from './welcome-dialog/welcome-dialog.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { IncompleteSolutionDialogComponent } from './incomplete-solution-dialog/
     RadioListComponent,
     WinDialogComponent,
     IncorrectSolutionDialogComponent,
-    IncompleteSolutionDialogComponent
+    IncompleteSolutionDialogComponent,
+    WelcomeDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -53,6 +55,7 @@ import { IncompleteSolutionDialogComponent } from './incomplete-solution-dialog/
     WinDialogComponent,
     IncompleteSolutionDialogComponent,
     IncorrectSolutionDialogComponent,
+    WelcomeDialogComponent,
   ],
 })
 export class AppModule { }

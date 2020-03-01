@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BotResponseService } from './bot-response.service';
 import { DialogService } from './dialog.service';
 import { HelpDialogComponent } from './help-dialog/help-dialog.component';
+import { WelcomeDialogComponent } from './welcome-dialog/welcome-dialog.component';
 
 @Component({
   selector: 'app-root',
@@ -23,6 +24,6 @@ export class AppComponent implements OnInit {
         console.info('Finished loading models');
       }
     );
-    this.dialogService.open(HelpDialogComponent);
+    this.dialogService.open(WelcomeDialogComponent);
   }
 }

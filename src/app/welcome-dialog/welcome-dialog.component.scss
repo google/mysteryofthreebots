@@ -1,0 +1,20 @@
+:host {
+    color: #fff;
+    max-width: 992px;
+    background-color: #000;
+    display: block;
+    padding: 202px 168px;
+
+    .header {
+        font-family: Smythe, sans-serif;
+    }
+    
+    .header-text {
+        font-size: 48px;
+        font-weight: normal;
+    }
+
+    .text {
+        font-size: 18px;
+    }
+}
