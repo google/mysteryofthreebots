@@ -23,6 +23,6 @@ export class AppComponent implements OnInit {
         console.info('Finished loading models');
       }
     );
-    this.dialogService.open(HelpDialogComponent);
+    // this.dialogService.open(HelpDialogComponent);
   }
 }
