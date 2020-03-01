@@ -1,30 +1,17 @@
 :host {
-    margin: auto 0;
-    background: #fff;
-    border-radius: 10px;
-    padding: 80px;
+    background-color: #000;
+    color: #fff;
+    padding: 128px 168px;
     display: block;
-    max-width: 90vw;
-    max-height: 80vh;
 
     .header {
-        font-size: 24px;
-        font-weight: 900;
+        margin-bottom: 32px;
     }
     
-    .intro {
-        font-weight: 800;
-    }
-    
-    .columns {
-        display: flex;
-    }
-    
-    .column {
-        flex: 1;
-    }
-    
-    .column + .column {
-        margin-left: 90px;
+    .header-text {
+        margin: 0;
+        font-family: Smythe, sans-serif;
+        font-size: 48px;
+        font-weight: normal;
     }
 }
