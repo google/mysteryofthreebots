@@ -1,17 +1,17 @@
 Query,Response
 Where was the diamond originally?,The diamond had been in the glass case in the Study for more than a month before tonight's dinner event.
-What happened to the Diamond?,"Respectfully, I have no idea. I am not omnipotent. Do you think I'm Siri? The police already asked that. Ask something else."
-Where is the Diamond?,"Respectfully, I have no idea. I am not omnipotent. Do you think I'm Siri? The police already asked that. Ask something else."
-Who stole the Diamond?,"Respectfully, I have no idea. I am not omnipotent. Do you think I'm Siri? The police already asked that. Ask something else."
-Is the diamond in the house?,"Respectfully, I have no idea. I am not omnipotent. Do you think I'm Siri? The police already asked that. Ask something else."
+What happened to the Diamond?,"Respectfully, I have no idea. I am not omnipotent. Do you think I'm Google? The police already asked that. Ask something else."
+Where is the Diamond?,"Respectfully, I have no idea. I am not omnipotent. Do you think I'm Google? The police already asked that. Ask something else."
+Who stole the Diamond?,"Respectfully, I have no idea. I am not omnipotent. Do you think I'm Google? The police already asked that. Ask something else."
+Is the diamond in the house?,"Respectfully, I have no idea. I am not omnipotent. Do you think I'm Google? The police already asked that. Ask something else."
 How much was the Diamond worth?,"The Diamond is worth millions, according to Mr. Welltodo. According to the insurance company, it is worth 1.3 million."
-Is the Diamond still in the house?,"Respectfully, I have no idea. I am not omnipotent. Do you think I'm Siri? The police already asked that. Ask something else."
+Is the Diamond still in the house?,"Respectfully, I have no idea. I am not omnipotent. Do you think I'm Google? The police already asked that. Ask something else."
 Why is it called the MacGuffin Diamond?,"The history of the diamond is that Roger MacGuffin in the 1850s spent his life searching the caves of Africa and India searching for a legendary diamond of massive proportions. He found it, then died of cholera. The diamond disappeared and didn't resurface until a month ago."
 Where would be a good place to hide a diamond?,Every room in the house has a place where one might hide something. Can you be more specific?
 Who first noticed the diamond was missing?,It was Colonel Gold who noticed the diamond missing. He called the police to report the theft. And thus ended the evening's festivities.
 Who looked at the Diamond?,"Detective, every guest looked at the diamond. That's why they were here, to look at that impressive gem. Mr. Welltodo didn't invite his friends here to not look at his priceless acquisition."
 When was the diamond stolen?,"The theft occurred after I left the study in the company of Mrs. Eggshell and Colonel Gold. Therefore, it happened after cocktails and during dinner. You can see how advanced my reasoning AI is. I just made a logical inference. An inference!"
-Who did it?,"Respectfully, I have no idea. I am not omnipotent. Do you think I'm Siri? The police already asked that. Ask something else."
+Who did it?,"Respectfully, I have no idea. I am not omnipotent. Do you think I'm Google? The police already asked that. Ask something else."
 Where in the house is the Diamond?,The diamond was in the Study. Then it was stolen. I don't know where it is now. Are you paying attention? Ask something the police haven't already asked.
 Who smashed the case?,"Someone who wanted the diamond, obviously. Who that is, I have no idea. Why don't you ask me something the police haven't?"
 Did someone have a key for the case?,"No one had a key to the case, which is why they smashed it to get the diamond."
@@ -184,5 +184,5 @@ Instructions,You require help? Help is indeed available to you. Look up and to t
 Who are the suspects?,"The police suspect that one of tonight's dinner guests absconded with the diamond. The guests were: Miss Red, Professor Pluot, Mrs. Bluejay, Reverend Grass, Colonel Gold, and Mrs. Eggshell."
 What are the rooms?,"The Welltodo Mansion has five rooms: the Living Room, the Office, the Dining Room, the Study. and the Kitchen. True, it is not a large mansion, but an impressive house nonetheless."
 What are the events?,"On the night in question, there were four events: the welcoming, the speech, cocktails, and dinner. The police were called during dinner."
-How do I play?,"Play? You think this is a game? This is no game this is a serious matter. What you need is help. So, press the HELP button. Look up and to the right. "
+How do I play?,"Play? You think this is a game? This is no game. This is an extremely serious matter. What you need is help. So, press the HELP button. Look up and to the right. "
 {{any}},"I am at a loss. Your question is either misstated or you are asking something I cannot answer. Ask me a question about a specific time, room or guest and I will do my best to produce a truth. Also, you might try pressing the HELP button, up and to the right."

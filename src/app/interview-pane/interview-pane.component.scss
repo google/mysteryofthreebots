@@ -14,26 +14,26 @@
         bottom: 0;
         left: 0;
         right: 0;
-        background-size: 100%;
         z-index: 1;
     }
     
     &[data-bot-name="Chef"]::before {
         margin-top: -155px;
         background: url(../../assets/images/chef.png) no-repeat;
-        background-size: 70%;
     }
     
     &[data-bot-name="Maid"]::before {
-        margin-top: -120px;
+        margin-top: -140px;
         background: url(../../assets/images/maid.png) no-repeat;
-        background-size: 60%;
     }
     
     &[data-bot-name="Butler"]::before {
-        margin-top: -125px;
-        background: url(../../assets/images/butler.png) no-repeat;
-        background-size: 80%;
+        margin-top: -140px;
+        background: url(../../assets/images/butler-fade.png) no-repeat;
+    }
+
+    &[data-bot-name]::before {
+        background-size: 90%;
     }
     
     $padding: 10px;
