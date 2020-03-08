@@ -14,4 +14,41 @@
         font-size: 48px;
         font-weight: normal;
     }
+
+    .bot-portraits {
+        float: right;
+
+        $portrait-size: 120px;
+
+        .portrait {
+            overflow: hidden;
+            width: $portrait-size;
+            height: $portrait-size;
+            min-width: $portrait-size;
+            min-height: $portrait-size;
+            max-width: $portrait-size;
+            max-height: $portrait-size;
+            background: #fff;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            position: relative;
+
+            > img {
+                position: absolute;
+                width: 170%;
+            }
+
+            &.butler > img {
+                left: -20px;
+            }
+
+            &.maid > img {
+                left: -48px;
+            }
+
+            &.chef > img {
+                left: -60px;
+            }
+        }
+    }
 }
