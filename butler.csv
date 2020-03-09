@@ -18,7 +18,6 @@ Did someone have a key for the case?,"No one had a key to the case, which is why
 Did anyone see who smashed the case?,"I can assure you that I did not see anyone smash the case and I do not know who did. I can tell who I saw and where and at what time. If I'm not helpful to you, then I apologize."
 Who had a key to the case?,"I had a key to the case, but I find the question ridiculous as the thief appears to have smashed the case to steal the diamond."
 Did anyone hear the case being smashed?,"Oddly enough, no one heard the case being smashed. I would assume the thief did something to muffle the sound."
-Which room did the hammer come from?,"The hammer does not belong to this house, that I can tell you. All house hardware is accounted for. I did an inventory for the police tonight."
 Had any of the suspects visited visited the house prior to tonight?,"All of tonight's guests were friends of Mr. Welltodo. So yes, they had all. I don't remember any specifics. My memory is wiped daily for privacy reasons."
 Who went into the Study?,All the guests entered the Study for the speech and some remained for cocktails. At exactly what time would you like to know about?
 Who went into the Living Room?,"All the guests entered the Living Room at the start of the event. Then they all left it for the speech. Some guests might have re-entered the Living Room, but I can't be sure. Exactly what time are you asking about?"
@@ -32,7 +31,7 @@ Who was acting weird?,"Who was acting weird? All humans, everywhere, at all time
 Did anyone act weird?,"Who was acting weird? All humans, everywhere, at all times, are acting weird. As an AI with an ordered mind, I find humans close to incomprehensible."
 Was anyone carrying a bag?,"Mrs. Eggshell, Miss Red and Mrs. Bluejay all had purses, which I stored in the coat closet. Professor Pluot had a leather satchel that he chose to keep with him the entire evening."
 Was anyone carrying a box?,"A box? You want to know if someone was carrying a box around, in which to put a stolen diamond. You realize that is a silly question, don't you detective?."
-Did  Professor Pluot act oddly during dinner?,I'm not sure what acting oddly actually means. Professor Pluot was late to dinner. Rude. He didn't contribute to the dinner conversation. Shy perhaps?
+Did Professor Pluot act oddly during dinner?,I'm not sure what acting oddly actually means. Professor Pluot was late to dinner. Rude. He didn't contribute to the dinner conversation. Shy perhaps?
 Tell me about Miss Red,"One would say that Miss Red is conventionally attractive, talkative, and seemed to take an interest in the Maid, specifically, how the Maid is treated, as if an AI Maid would care."
 Tell me about Professor Pluot,"Professor Plout is an associate professor of anthropology at City U. He specializes in the lost cultures of Central America, coincidently, where the Macguffin Diamond was discovered."
 Tell me about Pluot,"Professor Plout is an associate professor of anthropology at City U. He specializes in the lost cultures of Central America, coincidently, where the Macguffin Diamond was discovered."
@@ -60,6 +59,7 @@ What happened at dinner?,"During dinner, I was in the Dining Room where I superv
 What did you see during the start of the event?,"At the start of the evening, all the guests arrived on time. We gathered in the Living Room and then I escorted everyone to the Study for Mr. Welltodo's speech, which was followed by drinks and then dinner."
 What did you see during the speech?,"During the speech, all the guests seemed to play close attention to Mr. Welltodo, who really is a fabulous story teller."
 What did you see during cocktails?,"During cocktails in the Study, all guests had a drink, except for Professor Pluot, who left the Study and entered the Office. Miss Red had a glass of very good wine, and left. Then Mrs. Bluejay left with a martini, followed closely by Reverend Grass. Colonel Gold and Mrs. Eggshell sayyed with me for the entire cocktail period."
+Did anyone leave during dinner?,"During dinner in the Dining Room, all the guests seemed to enjoy the dinner Chef had prepared. Professor Pluot was a bit late, exactly 4.25 minutes to be exact. He was in the Living Room at the start of dinner for some reason. Also, Colonel Gold excused himself 15 minutes into dinner and left the room."
 What did you see during dinner?,"During dinner in the Dining Room, all the guests seemed to enjoy the dinner Chef had prepared. Professor Pluot was a bit late, exactly 4.25 minutes to be exact. He was in the Living Room at the start of dinner for some reason. Also, Colonel Gold excused himself 15 minutes into dinner and left the room."
 Tell me about yourself,"I am a LifeLike Butler -- patent pending, trademarked, property of Welltodo Technologies."
 Tell me about the Butler,"I am a LifeLike Butler -- patent pending, trademarked, property of Welltodo Technologies."
@@ -84,13 +84,13 @@ Where would someone hide a diamond in the Dining Room?,I suppose there is. I onc
 Where would someone hide a diamond in the Kitchen?,Mrs. Welltodo kept a spare liquor cabinet key in the Flour Jar.
 Where would someone hide a diamond in the Office?,"Behind the painting of Mrs. Welltodo, there is an electronic safe. Mr. Welltodo kept some cash and objects of sentimental value there."
 Where would someone hide a diamond in the Study?,"You might examine the globe. If you can open it, inside you'll find the good brandy."
-Anything unusual in the Living Room?,Not that I can think of. It's just the two chairs and the bookcase. There is that large Bible that recently appeared. Perhaps it's an antique acquired by Mr. Welltodo?
 Anything unusual in the Study?,"You might examine the globe. If you can open it, inside you'll find the good brandy."
 Any place to hide an object in the Dining Room?,I suppose there is. I once found a roll of hundred dollar bills in the Gravy Boat in the china cabinet.
+Anything unusual in the Living Room?,Not that I can think of. It's just the two chairs and the bookcase. There is that large Bible that recently appeared. Perhaps it's an antique acquired by Mr. Welltodo?
 Any place to hide an object in the Kitchen?,Mrs. Welltodo kept a spare liquor cabinet key in the Flour Jar.
-Any place to hide an object in the Office?,"Behind the painting of Mrs. Welltodo, there is an electronic safe. Mr. Welltodo kept some cash of objects of sentimental value there."
 Any place to hide an object in the Study?,"You might examine the globe. If you can open it, inside you'll find the good brandy."
 Any place to hide an object in the Living Room?,Not that I can think of. It's just the two chairs and the bookcase. There is that large Bible that recently appeared. Perhaps it's an antique acquired by Mr. Welltodo?
+Any place to hide an object in the Office?,"Behind the painting of Mrs. Welltodo, there is an electronic safe. Mr. Welltodo kept some cash of objects of sentimental value there."
 Go look in the bible,"I will not! In truth, I cannot. My body has been disabled until the investigation is over."
 Go look in the gravy boat,"I will not! In truth, I cannot. My body has been disabled until the investigation is over."
 Go look in the flour jar,"I will not! In truth, I cannot. My body has been disabled until the investigation is over."
@@ -98,19 +98,17 @@ Go look in the globe,"I will not! In truth, I cannot. My body has been disabled 
 Go look in the safe,"I will not! In truth, I cannot. My body has been disabled until the investigation is over."
 Who brought the bible?,"I do not know who brought the bible. It wasn't there before the guests arrived, but it was there at the end of the evening. Quite odd. Perhaps it was meant to be a gift?"
 Did a guest bring the bible?,"I do not know who brought the bible. It wasn't there before the guests arrived, but it was there at the end of the evening. Quite odd. Perhaps it was meant to be a gift?"
-Who was in the Living Room at the start of the event? During the greeting?,All the guests were with me at the start of tonight's event. We gathered in the Living Room before proceeding to the Study for the speech and cocktails. The Maid served light hors d'oeuvres.
+Who was in the Living Room at the start of the event? During the greeting? The welcoming?,All the guests were with me at the start of tonight's event. We gathered in the Living Room before proceeding to the Study for the speech and cocktails. The Maid served light hors d'oeuvres.
 Who was in the Living Room during the speech?,None of the guests were in the Living Room during the speech. They were all in the Study. Notice my advanced AI has the power of reasoning.
-Who was in the Living Room during cocktails?,"I can't say exactly who was in the Living Room during cocktails, as I was in the Study serving cocktails. I  can tell you that Mrs. Eggshell and Col. Gold stayed with me until dinner. I believe they were debating politics. Such a bore."
-Who was in the Living Room during dinner?,"During dinner all the guests were in the Dining Room, dining. However, I will say that Professor Plout was 4.35 minutes late. Also, Col Gold excused himself during the soup course and left the room."
+Who was in the Living Room during cocktails?,"I can't say exactly who was in the Living Room during cocktails, as I was in the Study serving cocktails. I can tell you that Mrs. Eggshell and Col. Gold stayed with me until dinner. I believe they were debating politics. Such a bore."
 Who was the last person to join dinner?,Professor Pluot has his degree in tardiness it seems. 4.35. minutes late. He did not say why. He was apologetic.
+Who was in the Dining Room during the speech?,"None of the guests were in the Dining Room during the speech. They were in the Study, enjoying the speech."
 Who was the first to leave dinner?,"Colonel Gold left dinner first, during the soup course. He apparently called the police about the missing diamond a few minutes later."
 Who was in the Dining Room at the start of the event? During the greeting?,"None of the guests were in the Dining Room at the start of the event. They were in the Living Room, being served hors d'oeuvres prepared by the Chef."
-Who was in the Dining Room during the speech?,"None of the guests were in the Dining Room during the speech. They were in the Study, enjoying the speech."
 Who left the Study during cocktails?,"First, Professor Pluot wandered away, didn't even have a drink. Then the Reverend Grass and the Mrs. Bluejay strolled away, both sipping Martinis, extra dry."
 Who left the Study after the speech?,"First, Professor Pluot wandered away, didn't even have a drink. Then the Reverend Grass and the Mrs. Bluejay strolled away, both sipping Martinis, extra dry. Miss Red then left, holding a glass of Malbec, a very good vintage."
 Who was in the Dining Room during cocktails?,"I do not know who was in the Dining Room during cocktails. The Maid would, as she was there preparing the table for supper. I can say that Mrs. Eggshell and Colonel Gold were not there, because they were with me."
 Who was in the Dining Room during dinner?,All the guests were in the Dining Room during dinner. Except for the very start of dinner. Professor Pluot arrived 4.35 minutes late.
-Who was in the Study at the start of the event? During the greeting?,None of the guests were in the Study at the start of the event. They were in the Living Room being greeted with refreshments.
 Who did you last see in the Study?,"After cocktails, I escorted Mrs. Eggshell and Colonel Gold to dinner. The room was empty when we left it. Was in the office at that time. Doing what, I don't have a clue. Whatever it was, it seemed to make him late for dinner."
 Who was in the Study during the speech?,All the guests were in the Study during the speech. They were quite enchanted by Mr. Welltodo's presentation.
 Who was in the Study during cocktails?,"During cocktails, all the guests were served drinks. Some wandered away. Mrs. Eggshell and Colonel Gold stayed with me."
@@ -124,6 +122,9 @@ Who was in the Kitchen at the start of the event? During the greeting?,I doubt a
 Who was in the Kitchen during the speech?,I doubt anyone was in the Kitchen during any portion of the evening. The Chef is quite temperamental about his domain being violated by the uninvited.
 Who was in the Kitchen during cocktails?,I doubt anyone was in the Kitchen during any portion of the evening. The Chef is quite temperamental about his domain being violated by the uninvited.
 Who was in the Kitchen during dinner?,I doubt anyone was in the Kitchen during any portion of the evening. The Chef is quite temperamental about his domain being violated by the uninvited.
+Where was Pluot right before dinner?,"The professor was just a bit late to dinner, exactly 4.35 seconds late. It seemed to me he came from the Living Room, but alas, I have no idea why he was in there."
+"Did you see a person, anyone at all, in the hallway?",You are going to have to be more specific. At what time? Who do you think I should have seen?
+Who was with you before dinner?,"Before dinner was cocktails, where I served as bartender. All the guests were with me then for at least a few minutes. Then they dispersed and roamed about the house."
 Where was Miss Red during the start of the event?,"At the start of the evening, Miss Red was with the other guests in the Living Room."
 Where was Professor Pluot during the start of the event?,"At the start of the evening, Professor Pluot was with the other guests in the Living Room."
 Where was Mrs. Bluejay during the start of the event?,"At the start of the evening, Mrs. Bluejay was with the other guests in the Living Room."
@@ -151,13 +152,9 @@ Where was Colonel Gold during dinner?,Colonel Gold was at dinner in the Dining R
 What did you see when the diamond was reported missing?,Colonel Gold told us the diamond had been stolen and called the police. All the guests were shocked.
 Where was Mrs. Eggshell during dinner?,"Mrs. Eggshell, bless her soul, sat next to Colonel Gold and listened to him repeat the same stories he told her during cocktails. I imagine the three martinis were a helpful buffer to his boorish insistence on proclaiming his heroism."
 Who was the last human you saw in the Study prior to noticing the diamond is missing?,Mrs. Eggshell and Colonel Gold were with me when we left the Study after cocktails.
-Where was Pluot right before dinner?,"Professor Pluot was in the Office during cocktails, and at the start of dinner I believe he was in the Living Room for some reason. Quite rude. Whatever he was doing made him late."
-Did you see professor pluot right before dinner?,"Professor Pluot was in the Office during cocktails, and at the start of dinner I believe he was in the Living Room for some reason. Quite rude. Whatever he was doing made him late."
-Where did pluot go when he left the study?,Professor Pluot went into the office during cocktails. Perhaps he wanted to rest a bit. There is a lovely red velvet couch in there.
-Did you see a person in the hallway?,During what event are you asking about?
+What was the disturbance in the Living Room?,The Maid witnessed that event. You should ask her.
 What happened to the lamp?,It was broken because the maid was careless. You should ask her about it.
 Why is there a broken lamp in the Living Room?,The Maid witnessed that event. You should ask her.
-What was the disturbance in the Living Room?,The Maid witnessed that event. You should ask her.
 When did you hear a strange sound?,"During cocktails, and before dinner there was a crash from the Living Room. I have no idea what it was. You'd have to ask the Maid. She dealt with it."
 What was for dinner?,The Chef prepared crown roast pork with mushroom dressing with sides of whipped herb potatoes and roasted garlic broccoli.
 Was there any blood anywhere?,"To my knowledge, no blood was found in the house, for which I am thankful. Blood is a challenge to remove, especially if dried."
@@ -179,10 +176,26 @@ Is that a red herring?,"Red herring are delicious when pickled. To whatever you 
 Hit the troll with the sword,There is no troll and no sword and this is not Zork nor the Underground Empire. Do you think this is a game we're playing?
 Is this like Zork?,Is this a game where you converse with a rudimentary AI while trying to solve absurd puzzles with silly solutions? You tell me.
 Is this a game?,"We do play games every other Thursday night. Feel free to drop by. However, the theft of the Macguffin Diamond is quite serious business and I suggest you get on with it."
-Help,You require help? Help is indeed available to you. Look up and to the right. Press the HELP button.
-Instructions,You require help? Help is indeed available to you. Look up and to the right. Press the HELP button.
-Who are the suspects?,"The police suspect that one of tonight's dinner guests absconded with the diamond. The guests were: Miss Red, Professor Pluot, Mrs. Bluejay, Reverend Grass, Colonel Gold, and Mrs. Eggshell."
+Who were the guests?,"The guests were as follows: Miss Red, Professor Pluot, Mrs. Bluejay, Reverend Grass, Colonel Gold, and Mrs. Eggshell. The police suspect that one of those people absconded with the diamond. Shocking!"
 What are the rooms?,"The Welltodo Mansion has five rooms: the Living Room, the Office, the Dining Room, the Study. and the Kitchen. True, it is not a large mansion, but an impressive house nonetheless."
+Who are the suspects?,"The police suspect that one of tonight's dinner guests absconded with the diamond. The guests were: Miss Red, Professor Pluot, Mrs. Bluejay, Reverend Grass, Colonel Gold, and Mrs. Eggshell."
 What are the events?,"On the night in question, there were four events: the welcoming, the speech, cocktails, and dinner. The police were called during dinner."
-How do I play?,"Play? You think this is a game? This is no game. This is an extremely serious matter. What you need is help. So, press the HELP button. Look up and to the right. "
+Help,You require help? Help is indeed available to you. Look up and to the right. Press the HELP button.
+instructions,You wish instruction? You are wise to ask me for such. Press the HELP button. Look up and to the right.
+How do I play?,"Play? You think this is a game? This is no game. This is an extremely serious matter. What you need is help. So, press the HELP button. Look up and to the right."
+Which room did the hammer come from?,"The hammer does not belong to this house, that I can tell you. All house hardware is accounted for. I did an inventory for the police tonight."
+Can you tell me anything about containers?,"Containers are objects that hold objects, as I'm sure you know. What room exactly would you like to know about?"
+Anything unusual in the Dining Room?,"It's a dining room, table, chair, etc. It is odd that there is money stashed in the gravy boat in the china cabinet. But is that truly unusual? I don't have an opinion."
+Anything unusual in the Kitchen?,"The Chef is unusual, but he is sometimes not in the kitchen. I guess it is odd that there is a key kept in the flour jar."
+Anything unusual in the Office?,"Firstly, the painting of Mrs. Welltodo is odd because she is not that tall nor ever smiles, which she is in that rendering. Secondly, there is a safe behind the painting. "
+Who was in the Living Room during dinner?,"All the guests ate dinner at the same time, and that would be in the Dining Room. Correction. Professor Pluot was a bit late, and was in the Living Room at the start of dinner. I don't know why. Whatever it was, it made him late."
+Who was in the Study at the start of the event? During the greeting?,None of the guests were in the Study at the start of the event. They were in the Living Room being greeted with refreshments.
+Where was the chef during dinner?,"Detective, where do you think the chef was during dinner? He was in...take a guess? The kitchen."
+Did you see professor pluot right before dinner?,"Professor Pluot was in the Office during cocktails, and at the start of dinner I believe he was in the Living Room for some reason. Quite rude. Whatever he was doing made him late."
+Where did pluot go when he left the study?,Professor Pluot went into the office during cocktails. Perhaps he wanted to rest a bit. There is a lovely red velvet couch in there.
+Did you see a person in the hallway?,During what event are you asking about?
+What time did the guests arrive?,The guests all arrived promptly at 6 pm. We gathered in the Living Room for the Welcoming.
+What time did the speech start?,The speech was after the Welcoming and before Cocktails.
+What time did dinner start?,Dinner started right after Cocktails.
+How many courses were in the meal?,"There were the normal amount of courses, of course, five courses: the soup, the appetizers, the main course, and then of course dessert."
 {{any}},"I am at a loss. Your question is either misstated or you are asking something I cannot answer. Ask me a question about a specific time, room or guest and I will do my best to produce a truth. Also, you might try pressing the HELP button, up and to the right."

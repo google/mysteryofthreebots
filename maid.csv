@@ -59,6 +59,7 @@ What happened during dinner?,"I served the guests dinner, of course, in the Dini
 What did you see during the start of the event?,"At the start of the event, I helped greet the guests in the Living Room. Once all were assembled, the butler guided them to the Study for the speech and then cocktails. I went to the Dining Room to set the table and prepare to serve."
 What did you see during the speech?,"During the speech, I saw no one. I was setting the table for dinner."
 What did you see during cocktails?,"During cocktails, I was in the Dining Room preparing for dinner. During that time Miss Red came to visit me in the Dining Room. Also, during cocktails, I noticed Mrs. Bluejay and the Reverend Grass...privacy filter on...in a close situation. I startled them by looking at them, which caused them to knock over and break a lamp in the Living Room."
+Did anyone leave during dinner?,"During dinner, the guests all sat and ate at the same time. I can't say who was in the Study or not. I can tell you that Professor Pluot was a bit late. Something in the Living Room seemed to have captured his attention. Also, Colonel Gold left about 15 minutes in, during the soup course."
 What did you see during dinner?,"During dinner, the guests all sat and ate at the same time. I can't say who was in the Study or not. I can tell you that Professor Pluot was a bit late. Something in the Living Room seemed to have captured his attention. Also, Colonel Gold left about 15 minutes in, during the soup course."
 Tell me about yourself,"I am a LifeLike Maid -- patent pending, trademarked, property of Welltodo Technologies."
 Tell me about the Butler,He is good at his job and is a snob as well as an insufferable bastard. It's not his fault. It's just programming.
@@ -67,7 +68,6 @@ Tell me about the Chef,He is an excellent chef. Or so I'm told. I don't actually
 Where was the Butler?,"The Butler was in the Living Room during the welcome and in the Study during the speech. He served cocktails in the Study, and then escorted guests to the dining room for dinner. I served dinner as he ""supervised"" me."
 Where was the Chef?,"The Chef rarely leaves the kitchen, where he is almost always cooking something. I wouldn't disturb him if I were you."
 Where were you?,I welcomed the guests in the Living Room with the Butler. Then I went to the dining room to prepare for dinner. I was there the rest of the night. I never even got to see the diamond.
-Can you tell me anything about containers?,Every room has some sort of nook or cranny where one might hide something. What room did you want to know about?
 What container is in the Dining Room?,I've noticed that Mr. Welltodo sometimes keeps petty cash in the gravy boat in the china cabinet. It's his secret little petty cash stash.
 What container is in the Kitchen?,"Don't repeat this, but I have noticed that Mr. Welltodo hides a key in the flour container. A key to what? I have no clue."
 What container is in the Office?,"This is secret, but I suppose it's proper to tell you. There is a safe behind the painting of Mrs. Welltodo in the Office."
@@ -84,16 +84,13 @@ Where would someone hide a diamond in the Dining Room?,I've noticed that Mr. Wel
 Where would someone hide a diamond in the Kitchen?,"Don't repeat this, but I have noticed that Mr. Welltodo hides a key in the flour container. A key to what? I'm not sure."
 Where would someone hide a diamond in the Office?,"This is secret, but I suppose it's proper to tell you. There is a safe behind the painting of Mrs. Welltodo in the Office."
 Where would someone hide a diamond in the Study?,"A secret place in the Study? Well yes, but it's not much of a secret. The globe opens up, if you press on England. Inside is ""the good brandy"" as Mr. Welltodo calls it."
-Anything unusual in the Living Room?,"Now that you mention it, there did seem to be a book on a Living Room shelf that was not there when I dusted in the morning. A large antique bible, I think. Unusually large. It will be a dust magnet I fear."
-Anything unusual in the Dining Room?,I've noticed that Mr. Welltodo sometimes keeps petty cash in the gravy boat in the china cabinet.
-Anything unusual in the Kitchen?,"Don't repeat this, but I have noticed that Mr. Welltodo hides a key in the flour container. A key to what? I'm not sure."
-Anything unusual in the Office?,"This is secret, but I suppose it's proper to tell you. There is a safe behind the painting of Mrs. Welltodo in the Office."
 Anything unusual in the Study?,"A secret place in the Study? Well yes, but it's not much of a secret. The globe opens up, if you press on England and unlock the secret lock. Inside is ""the good brandy"" as Mr. Welltodo calls it."
 Any place to hide an object in the Dining Room?,I've noticed that Mr. Welltodo sometimes keeps petty cash in the gravy boat in the china cabinet.
+Anything unusual in the Living Room?,"Now that you mention it, there did seem to be a book on a Living Room shelf that was not there when I dusted in the morning. A large antique bible, I think. Unusually large. It will be a dust magnet I fear."
 Any place to hide an object in the Kitchen?,"Don't repeat this, but I have noticed that Mr. Welltodo hides a key in the flour container. A key to what? I'm not sure."
-Any place to hide an object in the Office?,"This is secret, but I suppose it's proper to tell you. There is a safe behind the painting of Mrs. Welltodo in the Office."
 Any place to hide an object in the Study?,"A secret place in the Study? Well yes, but it's not much of a secret. The globe opens up, if you press on England, which unlatches a secret latch. Inside is ""the good brandy"" as Mr. Welltodo calls it."
 Any place to hide an object in the Living Room?,"Now that I can think of it, there did seem to be a book on the shelf that was not there when I dusted in the morning. A large antique bible."
+Any place to hide an object in the Office?,"This is secret, but I suppose it's proper to tell you. There is a safe behind the painting of Mrs. Welltodo in the Office."
 Go look in the bible,"I wish I could, but so sorry, I can't. I've been rendered immobile until the investigation is over."
 Go look in the gravy boat,"I wish I could, but so sorry, I can't. I've been rendered immobile until the investigation is over."
 Go look in the flour jar,"I wish I could, but so sorry, I can't. I've been rendered immobile until the investigation is over."
@@ -101,19 +98,17 @@ Go look in the globe,"I wish I could, but so sorry, I can't. I've been rendered 
 Go look in the safe,"I wish I could, but so sorry, I can't. I've been rendered immobile until the investigation is over."
 Who brought the bible?,"I would guess one of the guests, but I have no clue. I wish they wouldn't have. It will surely attract dust."
 Did a guest bring the bible?,"I would guess one of the guests, but I have no clue. I wish they wouldn't have. It will surely attract dust."
-Who was in the Living Room at the start of the event? During the greeting?,"Everyone invited was there, and was on time. We were in the Living Room for a few moments, then the butler took everyone to the Study for the speech and cocktails. I went to the Dining Room to prepare for dinner."
+Who was in the Living Room at the start of the event? During the greeting? The Welcoming?,"Everyone invited was there, and was on time. We were in the Living Room for a few moments, then the butler took everyone to the Study for the speech and cocktails. I went to the Dining Room to prepare for dinner."
 Who was in the Living Room during the speech?,"During the speech, I don't believe anyone was in the Living Room. I had a view of that room from the Dining Room."
 Who was in the Living Room during cocktails?,"It was during cocktails that Mrs. Bluejay and the Reverend Grass went into the Living Room and began -- privacy filter on -- entertaining each other, closely. They were startled by me watching them, and so knocked over the lamp. All my fault. I do apologize."
 Who was the last person to join dinner?,"The last person to join us at dinner was professor Pluot. He was a few minutes late. He did not say why. He was apologetic about it. He had been doing something in the living room, but I could not see what."
+Who was in the Dining Room during the speech?,"I was all by myself during the speech. I was in the Dining Room, preparing for dinner."
 Who was the first to leave dinner?,"The first to leave dinner was Colonel Gold. During the soup course he excused himself and left the room. Shortly thereafter, he called the police about the missing diamond."
 Who was in the Dining Room at the start of the event? During the greeting?,"At the start of the event, none of the guests were in the Dining Room. They gathered in the Living Room and were then escorted into the Study for the speech."
-Who was in the Dining Room during the speech?,"I was all by myself during the speech. I was in the Dining Room, preparing for dinner."
 Who left the Study during cocktails?,"I have no idea what happened in the Study during cocktails. I was in the Dining Room preparing for dinner. I can say that Miss Red visited with me and was lovely. I can also tell you that Reverend Grass and Mrs. Bluejay went into the Living Room, engaged in...privacy filter on...a friendly activity. Then, they were startled because I was looking at them, and then they broke a lamp. They were apologetic, which was nice. It was clearly my fault."
 Who left the Study after the speech?,"I have no idea what happened with most of the guests after the speech and before dinner. I was in the Dining Room preparing for dinner. I can say that Miss Red visited with me and was lovely. I can also tell you that Reverend Grass and Mrs. Bluejay went into the Living Room, engaged in...privacy filter on...a friendly activity. Then, they were startled because I was looking at them, and then they broke a lamp. They were apologetic, which was nice. It was clearly my fault."
 Who was in the Dining Room during cocktails?,"During cocktails, I was in the Dining Room preparing for dinner. Miss Red visited with me and was lovely. I can also tell you that Reverend Grass and Mrs. Bluejay went into the Living Room, engaged in...privacy filter on...a friendly activity. Then, they startled because I was looking at them, and then they broke a lamp. They were apologetic, which was nice. It was clearly my fault."
-Who was in the Living Room during dinner?,"All the guests ate dinner at the same time, and that would be in the Dining Room. Correction. Professor Pluot was a bit late, and was in the Living Room at the start of dinner. I don't know why. Whatever it was, it made him late."
 Who was in the Dining Room during dinner?,"All the guests ate dinner in the Dining Room. Correction. Professor Pluot was a bit late, and had been in the Living Room at the start of dinner. I'm uncertain why. Whatever he was doing, it made him late."
-Who was in the Study at the start of the event? During the greeting?,I don't believe anyone was in the Study at the start of the event. All the guests were gathered in the Living Room and were then escorted to the Study by the butler.
 Who did you last see in the Study?,"I wasn't in the study the entire night, I'm afraid. I spent most of my time in the dining room."
 Who was in the Study during the speech?,The butler was in the Study during the speech with the guests. You'll have to ask him what happened. I was in the Dining Room preparing for dinner.
 Who was in the Study during cocktails?,"I don't know who was in the Study during cocktails. You'd have to ask the butler. I can tell that during that time Miss Red came to visit me in the Dining Room. Also, during cocktails, I noticed Mrs. Bluejay and the Reverend Grass...privacy filter on...in a close situation. I startled them by looking at them, which caused them to knock over and break a lamp in the Living Room."
@@ -128,7 +123,6 @@ Who was in the Kitchen during the speech?,"If you knew the chef, you wouldn't ev
 Who was in the Kitchen during cocktails?,"If you knew the chef, you wouldn't even ask. He hates when people enter the Kitchen. My guess is that no one entered the Kitchen the entire night."
 Who was in the Kitchen during dinner?,"If you knew the chef, you wouldn't even ask. He hates when people enter the Kitchen. My guess is that no one entered the Kitchen the entire night."
 Where was Pluot right before dinner?,"I don't know where the professor was before dinner. At the start of dinner, he was in the Living Room and then he arrived at the dinner table 4.35 minutes late. I forgave him."
-Did you see professor pluot right before dinner?,"I don't know where the professor was before dinner. At the start of dinner, he was in the Living Room and then he arrived at the dinner table 4.35 minutes late. I forgave him."
 "Did you see a person, anyone at all, in the hallway?","Can you be more specific about when I might have seen someone? Are you curious about the greeting, the speech, cocktails or dinner?"
 Who was with you before dinner?,"During cocktails, the lovely Miss Red kept me company while I set the table for dinner. She was so lovely to me, seemed very concerned about my treatment. I assured her that I'm not sentient and my feelings could not be hurt. Unlike the chef."
 Where was Miss Red during the start of the event?,"Everyone invited, including Miss Red, was in the Living Room for a few moments, then the butler took everyone to the Study for the speech and cocktails. I went to the Dining Room to prepare for dinner."
@@ -158,7 +152,6 @@ Where was Colonel Gold during dinner?,"All the guests ate dinner in the Dining R
 What did you see when the diamond was reported missing?,"When the diamond was reported missing, the police arrived and took all the guests the way. After they searched the house, they left."
 Where was Mrs. Eggshell during dinner?,"All the guests ate dinner in the Dining Room. Correction. Professor Pluot was a bit late, as he was in the Living Room at the start of dinner. I'm uncertain why. He was definitely late."
 Who was the last human you saw in the Study prior to noticing the diamond is missing?,"The entire evening, I never went into the Study. I spent my time in the Dining Room, and at the start of the evening, I greeted guests in the Living Room."
-Where was the chef during dinner?,"The chef stayed in the kitchen the entire evening, except for the welcoming. I wouldn't speak to him if I were you. He can be quite grumpy when his cooking is interrupted."
 What was the disturbance in the Living Room?,"During cocktails, I noticed Mrs. Blue Jay and the Reverend Grass...privacy filter on...in a close situation in the Living Room. I startled them by looking at them, which caused them to knock over and break the lamp. Completely my fault. I will clean up the mess as soon as allowed."
 What happened to the lamp?,"During cocktails, I noticed Mrs. Blue Jay and the Reverend Grass...privacy filter on...in a close situation in the Living Room. I startled them by looking at them, which caused them to knock over and break the lamp. Completely my fault. I will clean up the mess as soon as allowed."
 Why is there a broken lamp in the Living Room?,"It was quite a sight. I was preparing the table for dinner when I noticed two people in the Living Room. I wasn't spying, they were just in there, and then I noticed that they were...being affectionate. Then they noticed me noticing them, startled, and knocked over a lamp. It was all my fault really."
@@ -168,27 +161,41 @@ Was there any blood anywhere?,"Oh mercy no! No blood, for which I am thankful. I
 Was anybody murdered?,I hope not! Can you imagine the cleaning problems a corpse would provide? The stains? The smells?.
 What was the speech about?,"I wasn't at the speech, sadly. I had duties in the Dining Room. I never do the fun things, like the butler does."
 What was the glass case smashed with?,"I do not know, but here is what I do. First, there is glass everywhere in the Study that I need to sweep up. Second, there was a hammer found on the floor. Third, a red velvet pillow was found in the Study, a pillow that belongs on the couch in the Office."
-Which room did the hammer come from?,"I had never seen that hammer before. I believe it was brought into the house, perhaps by one of the guests. Which one? No idea. But I wish they hadn't made such a mess."
 Hi,Hello to you detective! Very pleasant to see you. What shall we discuss?
 Hello,Hello to you detective! Very pleasant to see you. What shall we discuss?
 How are you?,I'm quite well detective! Very pleasant to see you. What shall we discuss?
-Kiss,Detective you are going to make me blush. Such a question. You know my privacy filters won't let me answer such a thing.
 Tell me about the Bible.,"There is a large, quite large I must say, Bible in the Living Room that was not there yesterday I can assure you. Odd thing to just suddenly show up like that."
-What is in the Bible?.,"I have no idea what the Bible contains. It is large, large enough to hold a baseball, or the Macguffin diamond now that you mention it. It also has a latch that holds it shut."
+What is in the Bible?,"I have no idea what the Bible contains. It is large, large enough to hold a baseball, or the Macguffin diamond now that you mention it. It also has a latch that holds it shut."
 Tell me about the gravy boat.,The gravy boat in the Dining Room appears to be a convenient place for Mrs. Welltodo to store petty cash. She thinks it's a secret. Don't tell her I told you.
 What is in the gravy boat?,"I haven't looked in quite a while. Last time I took a peek, while inspecting the Maid's dusting, I found Mrs. Welltodo's stash of hundred dollar bills."
 Tell me about the flour jar.,"In the Kitchen, there is a flour jar that occasionally seems to also hold bullets. I have no idea why Mr. Welltodo keeps ammunition there. I'm not at all suspicious. I'm he has a reasonable and wise explanation."
-Tell me about the safe.,"In the Office, behind the painting of Mrs. Welltodo, there is a safe where private papers, some cash, and the deed to the house are kept. Also, photos of Mr. Welltodo's enemies in compromising situations.
-"
+Tell me about the safe.,"In the Office, behind the painting of Mrs. Welltodo, there is a safe where private papers, some cash, and the deed to the house are kept. Also, photos of Mr. Welltodo's enemies in compromising situations."
 Tell me about the globe.,"Inside the globe in the Study you'll find some very, very fine brandy. Only Mr. Welltodo is allowed to partake, he and special guests."
-Where is the key for the globe?.,The globe does not require a key. You can open it by pressing the button hidden under the island of England. That's a secret. Mr. Welltodo would be cross with me if he finds out I told you that.
+Where is the key for the globe?,The globe does not require a key. You can open it by pressing the button hidden under the island of England. That's a secret. Mr. Welltodo would be cross with me if he finds out I told you that.
 Is that a red herring?,A herring! I would not allow such a thing outside of the Dining Room. The smell. PU!
 Hit the troll with the sword,"Detective, would you like to play an RPG with me? You're so nice. Solve this mystery and we'll see if we can't be friends when it's all said and done."
 Is this like Zork?,It's not at all like Zork. No one has yet been eaten by a grue.
 Is this a game?,"Life is game, Detective. Wouldn't you agree?"
+Who were the guests?,"Such lovely people! I'm so glad to have met them. They were: Miss Red, Professor Pluot, Mrs. Bluejay, Reverend Grass, Colonel Gold, and Mrs. Eggshell. So hard to believe that one of them stole the diamond!"
 What are the rooms?,"Every room in the Welltodo Mansion is gorgeous. The Living Room, the Office, the Dining Room, the Study, and the Kitchen are all tastefully appointed and a pleasure to take care of."
-What are the events?,"It was such an exciting night! There were four four events: the welcoming, the speech, cocktails, and dinner. It's a shame dinner was ruined by the arrival of the police."
-How do I play?,"Play! I so wish I could play, but I have so much work to do.  I think I can help though. Press the HELP button. Look up and to the right. "
+Who are the suspects?,"Such lovely people! I'm so glad to have met them. They were: Miss Red, Professor Pluot, Mrs. Bluejay, Reverend Grass, Colonel Gold, and Mrs. Eggshell. So hard to believe that one of them stole the diamond!"
+What are the events?,"On the night in question, there were four events: the welcoming, the speech, cocktails, and dinner. The police were called during dinner."
 Help,"I'd love to help you, but you can help yourself by pressing the HELP button. It's in the top right corner."
 instructions,"I'd love to help you, but you can help yourself by pressing the HELP button. It's in the top right corner."
+How do I play?,"Play! I so wish I could play, but I have so much work to do. I think I can help though. Press the HELP button. Look up and to the right."
+Which room did the hammer come from?,"I had never seen that hammer before. I believe it was brought into the house, perhaps by one of the guests. Which one? No idea. But I wish they hadn't made such a mess."
+Can you tell me anything about containers?,Every room has some sort of nook or cranny where one might hide something. What room did you want to know about?
+Anything unusual in the Dining Room?,I've noticed that Mr. Welltodo sometimes keeps petty cash in the gravy boat in the china cabinet.
+Anything unusual in the Kitchen?,"Don't repeat this, but I have noticed that Mr. Welltodo hides a key in the flour container. A key to what? I'm not sure."
+Anything unusual in the Office?,"This is secret, but I suppose it's proper to tell you. There is a safe behind the painting of Mrs. Welltodo in the Office."
+Who was in the Living Room during dinner?,"During dinner all the guests were in the Dining Room, dining. However, I will say that Professor Plout was 4.35 minutes late. Also, Col Gold excused himself during the soup course and left the room."
+Who was in the Study at the start of the event? During the greeting?,I don't believe anyone was in the Study at the start of the event. All the guests were gathered in the Living Room and were then escorted to the Study by the butler.
+Where was the chef during dinner?,"The chef stayed in the kitchen the entire evening, except for the welcoming. I wouldn't speak to him if I were you. He can be quite grumpy when his cooking is interrupted."
+Did you see professor pluot right before dinner?,It seemed to me that the Professor came in from the Living Room right before dinner. He must have been sad about the broken lamp.
+Where did pluot go when he left the study?,"I have no idea. It sounds like you are asking about the cocktail period, and I was in the dining room."
+Did you see a person in the hallway?,"Oh dear, so sorry. Can you be more specific?"
+What time did the guests arrive?,Our evening started at 6 pm. It was nice to see all of Mr. Welltodo's interesting friends! We were gathered in the Living Room for the Welcoming.
+What time did the speech start?,The Speech was after the Welcoming and before Cocktails. I'm so sorry I missed it. I was in the Dining Room the entire night.
+What time did dinner start?,Dinner followed Cocktails. Such a lovely dinner it was! The Chef truly outdid himself.
+How many courses were in the meal?,"There were five lovely courses: the soup, the appetizers, the main course, and then of course dessert. We never got to dessert. The police arrived and everyone was so upset."
 {{any}},"I don't have the first clue as to how to answer that question. I'd love to be more helpful. Perhaps you should ask me about what exactly I saw and at exactly what time. Or, press the HELP button, up and to the right."
