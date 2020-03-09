@@ -65,6 +65,7 @@ export class DialogService implements OnDestroy {
       return;
     }
     this.renderer.removeClass(this.backdrop, 'is-open');
+    this.dialog.dispatchEvent(new CustomEvent('dialog-closed'));
   }
 
   handleCloseDialog() {

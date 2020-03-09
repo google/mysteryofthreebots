@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import { BotResponseService } from './bot-response.service';
 import { DialogService } from './dialog.service';
 import { HelpDialogComponent } from './help-dialog/help-dialog.component';
@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
   title = 'mysterybot';
 
   constructor(
+    private root: ElementRef,
     private botResponseService: BotResponseService,
     private readonly dialogService: DialogService
   ) {}
@@ -24,6 +25,12 @@ export class AppComponent implements OnInit {
         console.info('Finished loading models');
       }
     );
+    const handleDialogClosed = () => {
+      this.dialogService.open(HelpDialogComponent);
+      this.root.nativeElement.removeEventListener('dialog-closed', handleDialogClosed, true);
+    };
     this.dialogService.open(WelcomeDialogComponent);
+    this.root.nativeElement.addEventListener('dialog-closed', handleDialogClosed, true);
   }
+
 }
