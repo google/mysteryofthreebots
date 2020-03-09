@@ -32,9 +32,9 @@ handlers:
   expiration: "1h"
 
 # image files
-- url: /(.*\.(bmp|gif|ico|jpeg|jpg|png))
+- url: /(.*\.(bmp|gif|ico|jpeg|jpg|png|svg))
   static_files: dist/\1
-  upload: dist/(.*\.(bmp|gif|ico|jpeg|jpg|png))
+  upload: dist/(.*\.(bmp|gif|ico|jpeg|jpg|png|svg))
 
 # site root
 - url: /
