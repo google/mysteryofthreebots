@@ -18,6 +18,7 @@ import { WinDialogComponent } from './win-dialog/win-dialog.component';
 import { IncorrectSolutionDialogComponent } from './incorrect-solution-dialog/incorrect-solution-dialog.component';
 import { IncompleteSolutionDialogComponent } from './incomplete-solution-dialog/incomplete-solution-dialog.component';
 import { WelcomeDialogComponent } from './welcome-dialog/welcome-dialog.component';
+import { DialogCloseButtonComponent } from './dialog-close-button/dialog-close-button.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { WelcomeDialogComponent } from './welcome-dialog/welcome-dialog.componen
     WinDialogComponent,
     IncorrectSolutionDialogComponent,
     IncompleteSolutionDialogComponent,
-    WelcomeDialogComponent
+    WelcomeDialogComponent,
+    DialogCloseButtonComponent
   ],
   imports: [
     BrowserModule,

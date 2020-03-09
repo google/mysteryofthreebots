@@ -9,14 +9,15 @@ import {
   EmbeddedViewRef,
   ComponentRef,
   EventEmitter,
-  Type
+  Type,
+  OnDestroy
 } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 
 @Injectable({
   providedIn: 'root'
 })
-export class DialogService {
+export class DialogService implements OnDestroy {
   private readonly renderer: Renderer2;
   private dialog: HTMLElement;
   private backdrop: HTMLElement;
@@ -30,6 +31,7 @@ export class DialogService {
     @Inject(DOCUMENT) private readonly document: HTMLDocument
   ) {
     this.renderer = rendererFactory.createRenderer(null, null);
+    this.handleCloseDialog = this.handleCloseDialog.bind(this);
   }
 
   open(component: Type<any>) {
@@ -51,6 +53,7 @@ export class DialogService {
     }
     if (!this.dialog) {
       this.dialog = this.document.getElementById('app-dialog');
+      this.dialog.addEventListener('close-dialog', this.handleCloseDialog, true);
     }
     this.renderer.addClass(this.backdrop, 'is-open');
     this.dialog.innerHTML = '';
@@ -62,5 +65,15 @@ export class DialogService {
       return;
     }
     this.renderer.removeClass(this.backdrop, 'is-open');
+  }
+
+  handleCloseDialog() {
+    this.close();
+  }
+
+  ngOnDestroy() {
+    if (this.dialog) {
+      this.dialog.removeEventListener('close-dialog', this.handleCloseDialog);
+    }
   }
 }

@@ -2,7 +2,8 @@
     background-color: #000;
     color: #fff;
     padding: 128px 168px;
-    display: block;
+    display: flex;
+    flex-direction: column;
 
     .header {
         margin-bottom: 32px;
@@ -50,5 +51,10 @@
                 left: -60px;
             }
         }
+    }
+
+    .close-button {
+        clear: both;
+        align-self: center;
     }
 }

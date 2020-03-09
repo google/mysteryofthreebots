@@ -1,6 +1,10 @@
 @import "../../styles/notebook";
 
 :host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   .page__header {
     color: #931010;
     font-weight: normal;

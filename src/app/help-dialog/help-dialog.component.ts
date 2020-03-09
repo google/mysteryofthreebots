@@ -1,15 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-help-dialog',
   templateUrl: './help-dialog.component.html',
   styleUrls: ['./help-dialog.component.scss']
 })
-export class HelpDialogComponent implements OnInit {
-
+export class HelpDialogComponent {
   constructor() { }
-
-  ngOnInit() {
-  }
-
 }

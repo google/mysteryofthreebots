@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-welcome-dialog',
   templateUrl: './welcome-dialog.component.html',
   styleUrls: ['./welcome-dialog.component.scss']
 })
-export class WelcomeDialogComponent implements OnInit {
+export class WelcomeDialogComponent {
 
-  constructor() { }
+  constructor(private root: ElementRef) { }
 
-  ngOnInit() {
+  handleContinueClick() {
+    this.root.nativeElement.dispatchEvent(new CustomEvent('close-dialog'));
   }
-
 }
