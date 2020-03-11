@@ -1,9 +1,14 @@
 :host {
     background: #fdf2de;
     border-radius: 10px;
-    display: block;
-    height: 80vh;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .content {
+        flex: 1;
+    }
+
     .certificate {
         border-radius: 10px;
         height: 100%;

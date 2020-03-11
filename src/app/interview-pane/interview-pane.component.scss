@@ -8,6 +8,8 @@
     
     &[data-bot-name]::before {
         content: "";
+        background-size: 90%;
+        background-repeat: no-repeat;
         display: block;
         position: absolute;
         top: 0;
@@ -19,23 +21,19 @@
     
     &[data-bot-name="Chef"]::before {
         margin-top: -145px;
-        background: url(../../assets/images/chef.png) no-repeat;
+        background-image: url(../../assets/images/chef.png);
     }
     
     &[data-bot-name="Maid"]::before {
         margin-top: -140px;
-        background: url(../../assets/images/maid.png) no-repeat;
+        background-image: url(../../assets/images/maid.png);
     }
     
     &[data-bot-name="Butler"]::before {
         margin-top: -140px;
-        background: url(../../assets/images/butler-fade.png) no-repeat;
+        background-image: url(../../assets/images/butler-fade.png);
     }
 
-    &[data-bot-name]::before {
-        background-size: 90%;
-    }
-    
     $padding: 10px;
     $font-size: 24px;
     $height: $font-size + $padding + $padding + 4;

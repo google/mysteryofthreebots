@@ -1,12 +1,13 @@
 :host {
     background-color: #000;
     color: #fff;
-    padding: 128px 168px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
+    height: 100%;
 
     .header {
-        margin-bottom: 32px;
+        margin-bottom: 12px;
     }
     
     .header-text {
@@ -14,6 +15,11 @@
         font-family: Smythe, sans-serif;
         font-size: 48px;
         font-weight: normal;
+    }
+
+    .content {
+        overflow: auto;
+        flex: 1;
     }
 
     .bot-portraits {
@@ -50,11 +56,16 @@
             &.chef > img {
                 left: -60px;
             }
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
         }
     }
 
     .close-button {
-        clear: both;
         align-self: center;
+        clear: both;
+        margin-top: 20px;
     }
 }
