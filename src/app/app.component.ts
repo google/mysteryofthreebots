@@ -10,7 +10,7 @@ import { WelcomeDialogComponent } from './welcome-dialog/welcome-dialog.componen
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  title = 'mysterybot';
+  title = 'The Mystery of the Three Bots';
 
   constructor(
     private root: ElementRef,
