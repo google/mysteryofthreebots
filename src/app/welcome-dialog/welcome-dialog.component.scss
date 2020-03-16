@@ -8,18 +8,12 @@
     padding: 20px;
     position: relative;
 
-    &::before {
-        content: "";
-        background-image: url('../../assets/images/butler.png');
-        background-size: 100%;
-        background-repeat: no-repeat;
+    .butler-image {
+        position: absolute;
+        right: -50px;
+        bottom: -216px;
         transform: rotateY(180deg);
-        display: block;
-        height: 534px;
-        width: 287px;
-        position: fixed;
-        right: 0;
-        bottom: 0;
+        height: 100%;
     }
 
     .header {
