@@ -24,7 +24,7 @@ export class BotResponseService {
   private readonly modelPromise = use.load();
   private readonly modelPromisesByBotName = {};
   private loadModelsPromise?: Promise<IModelFetchResult[]>;
-  private minimumScore = 0.68;
+  private minimumScore = 0.6;
   private readonly statesByBotName: {
     [botName: string]: string|null;
   } = {
