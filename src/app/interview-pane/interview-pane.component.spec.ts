@@ -15,6 +15,7 @@
  */
 
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { InterviewPaneComponent } from './interview-pane.component';
 
@@ -24,7 +25,12 @@ describe('InterviewPaneComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ InterviewPaneComponent ]
+      declarations: [
+        InterviewPaneComponent,
+      ],
+      imports: [
+        HttpClientTestingModule,
+      ],
     })
     .compileComponents();
   }));

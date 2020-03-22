@@ -15,8 +15,10 @@
  */
 
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { ChatComponent } from './chat.component';
+import { InterviewPaneComponent } from '../interview-pane/interview-pane.component';
 
 describe('ChatComponent', () => {
   let component: ChatComponent;
@@ -24,7 +26,13 @@ describe('ChatComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ChatComponent ]
+      declarations: [
+        ChatComponent,
+        InterviewPaneComponent,
+      ],
+      imports: [
+        HttpClientTestingModule,
+      ],
     })
     .compileComponents();
   }));

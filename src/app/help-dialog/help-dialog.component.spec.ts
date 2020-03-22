@@ -17,6 +17,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HelpDialogComponent } from './help-dialog.component';
+import { DialogCloseButtonComponent } from '../dialog-close-button/dialog-close-button.component';
 
 describe('HelpDialogComponent', () => {
   let component: HelpDialogComponent;
@@ -24,7 +25,10 @@ describe('HelpDialogComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HelpDialogComponent ]
+      declarations: [
+        HelpDialogComponent,
+        DialogCloseButtonComponent,
+      ],
     })
     .compileComponents();
   }));

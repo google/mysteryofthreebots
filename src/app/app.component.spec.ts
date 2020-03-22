@@ -15,17 +15,72 @@
  */
 
 import { TestBed, async } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
 import { AppComponent } from './app.component';
+import { DialogHostComponent } from './dialog-host/dialog-host.component';
+import { HomeComponent } from './home/home.component';
+import { NavButtonsComponent } from './nav-buttons/nav-buttons.component';
+import { ChatComponent } from './chat/chat.component';
+import { InterviewPaneComponent } from './interview-pane/interview-pane.component';
+import { DialogCloseButtonComponent } from './dialog-close-button/dialog-close-button.component';
+import { BrowserDynamicTestingModule } from '@angular/platform-browser-dynamic/testing';
+import { WelcomeDialogComponent } from './welcome-dialog/welcome-dialog.component';
+import { HelpDialogComponent } from './help-dialog/help-dialog.component';
+import { HowDialogComponent } from './how-dialog/how-dialog.component';
+import { NotesDialogComponent } from './notes-dialog/notes-dialog.component';
+import { MapDialogComponent } from './map-dialog/map-dialog.component';
+import { SolveDialogComponent } from './solve-dialog/solve-dialog.component';
+import { WinDialogComponent } from './win-dialog/win-dialog.component';
+import { IncompleteSolutionDialogComponent } from './incomplete-solution-dialog/incomplete-solution-dialog.component';
+import { IncorrectSolutionDialogComponent } from './incorrect-solution-dialog/incorrect-solution-dialog.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
+        HttpClientTestingModule,
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        DialogHostComponent,
+        HomeComponent,
+        NavButtonsComponent,
+        ChatComponent,
+        InterviewPaneComponent,
+        DialogCloseButtonComponent,
+        HelpDialogComponent,
+        HowDialogComponent,
+        NotesDialogComponent,
+        MapDialogComponent,
+        SolveDialogComponent,
+        WinDialogComponent,
+        IncompleteSolutionDialogComponent,
+        IncorrectSolutionDialogComponent,
+        WelcomeDialogComponent,
       ],
-    }).compileComponents();
+      schemas: [
+        CUSTOM_ELEMENTS_SCHEMA,
+      ],
+    }).overrideModule(
+      BrowserDynamicTestingModule,
+      {
+        set: {
+          entryComponents: [
+            HelpDialogComponent,
+            HowDialogComponent,
+            NotesDialogComponent,
+            MapDialogComponent,
+            SolveDialogComponent,
+            WinDialogComponent,
+            IncompleteSolutionDialogComponent,
+            IncorrectSolutionDialogComponent,
+            WelcomeDialogComponent,
+          ],
+        },
+      }
+    ).compileComponents();
   }));
 
   it('should create the app', () => {
@@ -34,16 +89,9 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'mysterybot'`, () => {
+  it(`should have as title 'The Mystery of the Three Bots'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('mysterybot');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('mysterybot app is running!');
+    expect(app.title).toEqual('The Mystery of the Three Bots');
   });
 });

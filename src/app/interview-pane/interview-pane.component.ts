@@ -78,7 +78,9 @@ export class InterviewPaneComponent implements AfterViewChecked, AfterViewInit, 
   }
 
   ngOnDestroy() {
-    this.scrollContainer.nativeElement.removeEventListener('scroll', this.handleScroll);
+    if (this.scrollContainer) {
+      this.scrollContainer.nativeElement.removeEventListener('scroll', this.handleScroll);
+    }
   }
 
   handleScroll() {

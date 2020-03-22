@@ -17,6 +17,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HowDialogComponent } from './how-dialog.component';
+import { DialogCloseButtonComponent } from '../dialog-close-button/dialog-close-button.component';
 
 describe('HowDialogComponent', () => {
   let component: HowDialogComponent;
@@ -24,7 +25,10 @@ describe('HowDialogComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HowDialogComponent ]
+      declarations: [
+        HowDialogComponent,
+        DialogCloseButtonComponent,
+      ],
     })
     .compileComponents();
   }));

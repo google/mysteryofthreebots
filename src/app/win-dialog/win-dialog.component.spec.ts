@@ -17,6 +17,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { WinDialogComponent } from './win-dialog.component';
+import { DialogCloseButtonComponent } from '../dialog-close-button/dialog-close-button.component';
 
 describe('WinDialogComponent', () => {
   let component: WinDialogComponent;
@@ -24,7 +25,10 @@ describe('WinDialogComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WinDialogComponent ]
+      declarations: [
+        WinDialogComponent,
+        DialogCloseButtonComponent,
+      ],
     })
     .compileComponents();
   }));

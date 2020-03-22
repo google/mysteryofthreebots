@@ -17,6 +17,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { IncorrectSolutionDialogComponent } from './incorrect-solution-dialog.component';
+import { DialogCloseButtonComponent } from '../dialog-close-button/dialog-close-button.component';
 
 describe('IncorrectSolutionDialogComponent', () => {
   let component: IncorrectSolutionDialogComponent;
@@ -24,7 +25,10 @@ describe('IncorrectSolutionDialogComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ IncorrectSolutionDialogComponent ]
+      declarations: [
+        IncorrectSolutionDialogComponent,
+        DialogCloseButtonComponent,
+      ],
     })
     .compileComponents();
   }));

@@ -17,6 +17,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SolveDialogComponent } from './solve-dialog.component';
+import { DialogCloseButtonComponent } from '../dialog-close-button/dialog-close-button.component';
+import { RadioListComponent } from '../radio-list/radio-list.component';
 
 describe('SolveDialogComponent', () => {
   let component: SolveDialogComponent;
@@ -24,7 +26,11 @@ describe('SolveDialogComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SolveDialogComponent ]
+      declarations: [
+        SolveDialogComponent,
+        DialogCloseButtonComponent,
+        RadioListComponent,
+      ],
     })
     .compileComponents();
   }));
