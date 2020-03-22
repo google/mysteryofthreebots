@@ -73,4 +73,8 @@ export class SolveDialogComponent {
           undefined,
     };
   }
+
+  handleNoButtonClick() {
+    this.dialogService.close();
+  }
 }
