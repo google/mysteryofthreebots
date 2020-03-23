@@ -9,3 +9,14 @@ The game works by matching a representation of the player's input to precomputed
 ## Updating the models
 
 To update a model, changing the list of possible queries and responses, change the entries in the correponding bot's .csv file, then run `node ./generate_models.js` from the root directory of the project. This will update the JSON file under [./src/assets/models] which is read by the app to populate the models on the client side.
+
+
+## How were the corpora created?
+
+The corpora (the response lists) for the Butler and the Maid were created like this:
+1. Set up the four key events: the welcoming, the speech, the cocktails, and the dinner.
+2. Set up the five rooms: living room, dining room, kitchen, study and office.
+3. Run the bots and the suspects through each event and room.
+4. Record everything the bot sees in each room during each event. Those records of what the bot witnessed, go into that bot’s corpus.
+
+For example the maid was in the dining room (location) during cocktails (time period), so the maid can tell the player that during cocktails she was in the dining room with Ms. Red who was drinking a glass of wine. 
