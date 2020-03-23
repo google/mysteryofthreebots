@@ -67,15 +67,35 @@ export class BotResponseService {
     }
     return this.loadModelsPromise;
   }
+
+  /**
+   * Gets a bot's response to a player's question.
+   *
+   * @param query the player's question
+   * @param botName the name of the bot ('maid', 'butler' or 'chef')
+   */
   async getResponse(query: string, botName: string) {
     botName = botName.toLowerCase() as BotName;
+    // queryMap maps a JSON-encoded array consisting of candidate query string
+    // and state (if any) to response information. If no state is associated with
+    // the query, the array is one element long. For example:
+    //    '["Where is the diamond?","state1"]' => "I don't know where the diamond is",
+    //    '["Who was at dinner?"] => "All the guests were there"
+    // A null query represents a response that can apply to any query, but takes lower
+    // precedence than a non-null query.
+
+    // embeddingMap is a map from candidate query to the precomputed USE
+    // representation array
     const {queryMap, embeddingMap} = await this.modelPromisesByBotName[botName];
     const model = await this.modelPromise;
+    // Calculate the USE representation of the player's query
     const queryEmbedding = await model.embed([query]);
     const queryArrays = await queryEmbedding.array();
     let maxScore = -Infinity;
     let bestMatch: string|undefined;
     for (const potentialMatch of Object.keys(embeddingMap)) {
+      // Calculate a similarity score by taking the dot product of the player's
+      // encoded query with the encoded candidate query
       const score = dot(queryArrays[0], embeddingMap[potentialMatch]);
       if (score > maxScore) {
         maxScore = score;
@@ -95,22 +115,28 @@ export class BotResponseService {
         NewState?: string;
         Response: string;
       };
+      // found a match--need to check if the states match
       if (bestMatch) {
         queryKeyPair = [bestMatch];
 
+        // If the bot currently has a state associated with it, incorporate
+        // that in the search
         if (this.statesByBotName[botName]) {
           queryKeyPair.push(this.statesByBotName[botName]);
         }
         match = queryMap[JSON.stringify(queryKeyPair)];
         if (match) {
+          // Update the state if there's a new state declared
           if (match.NewState) {
             this.statesByBotName[botName] = match.NewState;
           }
           return match.Response;
         }
       }
+      // No match found--check if there's a query set to match any input
       queryKeyPair[0] = null;
       if (this.statesByBotName[botName]) {
+        // Incorporate the bot's state, if any
         queryKeyPair.push(this.statesByBotName[botName]);
       }
       match = queryMap[JSON.stringify(queryKeyPair)];
