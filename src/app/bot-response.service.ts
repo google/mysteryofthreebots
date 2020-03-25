@@ -46,7 +46,7 @@ export class BotResponseService {
   } = {
     maid: null,
     butler: null,
-    chef: 'initial',
+    chef: null,
   };
 
   constructor(private http: HttpClient) { }
@@ -66,6 +66,22 @@ export class BotResponseService {
       }));
     }
     return this.loadModelsPromise;
+  }
+
+  setState({maid, butler, chef}: {maid?: string|null, butler?: string|null, chef?: string|null}) {
+    if (maid !== undefined) {
+      this.statesByBotName.maid = maid;
+    }
+    if (butler !== undefined) {
+      this.statesByBotName.butler = butler;
+    }
+    if (chef !== undefined) {
+      this.statesByBotName.chef = chef;
+    }
+  }
+
+  getState(botName: BotName) {
+    return this.statesByBotName[botName];
   }
 
   /**

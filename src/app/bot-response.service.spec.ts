@@ -14,8 +14,9 @@
  *  limitations under the License.
  */
 
-import { TestBed } from '@angular/core/testing';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { TestBed, inject } from '@angular/core/testing';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import * as use from '@tensorflow-models/universal-sentence-encoder';
 
 import { BotResponseService } from './bot-response.service';
 
@@ -30,4 +31,176 @@ describe('BotResponseService', () => {
     const service: BotResponseService = TestBed.get(BotResponseService);
     expect(service).toBeTruthy();
   });
+
+  describe('getResponse', () => {
+    it('should return a matching query', inject(
+      [
+        HttpTestingController,
+        BotResponseService,
+      ],
+      async (httpMock: HttpTestingController, service: BotResponseService) => {
+        const loadPromise = service.loadModels();
+        const matches = httpMock.match(() => true);
+        const model = await use.load();
+        const queryKey = JSON.stringify(['Who is there?']);
+        const embedding = await model.embed(['Who is there?']);
+        const embeddingArrays = await embedding.array();
+        matches[0].flush({
+          queryMap: {
+            [queryKey]: {
+              Response: 'Orange you glad I didn\'t say banana',
+            },
+          },
+          embeddingMap: {
+            [queryKey]: embeddingArrays[0],
+          },
+        });
+        matches[1].flush({
+          queryMap: {
+          },
+          embeddingMap: {
+          },
+        });
+        matches[2].flush({
+          queryMap: {
+          },
+          embeddingMap: {
+          },
+        });
+        await loadPromise;
+        const responsePromise = service.getResponse('Who\s there?', 'maid');
+        const response = await responsePromise;
+        expect(response).toBe('Orange you glad I didn\'t say banana');
+        httpMock.verify();
+      }));
+
+    it('should return a query marked for any input', inject(
+        [
+          HttpTestingController,
+          BotResponseService,
+        ],
+        async (httpMock: HttpTestingController, service: BotResponseService) => {
+          const loadPromise = service.loadModels();
+          const matches = httpMock.match(() => true);
+          const queryKey = JSON.stringify([null]);
+          matches[0].flush({
+            queryMap: {
+              [queryKey]: {
+                Response: 'Anything goes!',
+              },
+            },
+            embeddingMap: {
+            },
+          });
+          matches[1].flush({
+            queryMap: {
+            },
+            embeddingMap: {
+            },
+          });
+          matches[2].flush({
+            queryMap: {
+            },
+            embeddingMap: {
+            },
+          });
+          await loadPromise;
+          const responsePromise = service.getResponse('Who\s there?', 'maid');
+          const response = await responsePromise;
+          expect(response).toBe('Anything goes!');
+          httpMock.verify();
+        }));
+
+    it('should check for state matching', inject(
+        [
+          HttpTestingController,
+          BotResponseService,
+        ],
+        async (httpMock: HttpTestingController, service: BotResponseService) => {
+          const loadPromise = service.loadModels();
+          const matches = httpMock.match(() => true);
+          const query = 'Can\'t you hear me knocking?';
+          const state1 = 'some state';
+          service.setState({
+            maid: state1,
+          });
+          const response1 = 'On the window';
+          const response2 = 'You\'re in a bad state';
+          const queryKey1 = JSON.stringify([query, state1]);
+          const queryKey2 = JSON.stringify([query]);
+          const model = await use.load();
+          const embedding = await model.embed([query]);
+          const [embeddingArray] = await embedding.array();
+          matches[0].flush({
+            queryMap: {
+              [queryKey1]: {
+                Response: response1,
+                State: state1,
+              },
+              [queryKey2]: {
+                Response: response2,
+              },
+            },
+            embeddingMap: {
+              [queryKey1]: embeddingArray,
+              [queryKey2]: embeddingArray,
+            },
+          });
+          matches[1].flush({
+            queryMap: {
+            },
+            embeddingMap: {
+            },
+          });
+          matches[2].flush({
+            queryMap: {
+            },
+            embeddingMap: {
+            },
+          });
+          await loadPromise;
+          const response = await service.getResponse('Can you hear me tapping?', 'maid');
+          expect(response).toBe(response1);
+          httpMock.verify();
+        }));
+
+    it('should change state on matched queries', inject(
+      [
+        HttpTestingController,
+        BotResponseService,
+      ],
+      async (httpMock: HttpTestingController, service: BotResponseService) => {
+        const loadPromise = service.loadModels();
+        const matches = httpMock.match(() => true);
+        const state = 'some state';
+        const response = 'On the window';
+        const queryKey = JSON.stringify([null]);
+        matches[0].flush({
+          queryMap: {
+            [queryKey]: {
+              Response: response,
+              NewState: state,
+            },
+          },
+          embeddingMap: {
+          },
+        });
+        matches[1].flush({
+          queryMap: {
+          },
+          embeddingMap: {
+          },
+        });
+        matches[2].flush({
+          queryMap: {
+          },
+          embeddingMap: {
+          },
+        });
+        await loadPromise;
+        await service.getResponse('Can you hear me tapping?', 'maid');
+        expect(service.getState('maid')).toBe(state);
+        httpMock.verify();
+      }));
+    });
 });

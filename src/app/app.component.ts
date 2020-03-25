@@ -35,6 +35,9 @@ export class AppComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.botResponseService.setState({
+      chef: 'initial',
+    });
     this.botResponseService.loadModels().then(
       () => {
         // tslint:disable-next-line: no-console
