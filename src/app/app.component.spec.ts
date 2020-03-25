@@ -14,7 +14,7 @@
  *  limitations under the License.
  */
 
-import { TestBed, async } from '@angular/core/testing';
+import { TestBed, async, inject, ComponentFixture } from '@angular/core/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
@@ -35,8 +35,10 @@ import { SolveDialogComponent } from './solve-dialog/solve-dialog.component';
 import { WinDialogComponent } from './win-dialog/win-dialog.component';
 import { IncompleteSolutionDialogComponent } from './incomplete-solution-dialog/incomplete-solution-dialog.component';
 import { IncorrectSolutionDialogComponent } from './incorrect-solution-dialog/incorrect-solution-dialog.component';
+import { BotResponseService } from './bot-response.service';
 
 describe('AppComponent', () => {
+  let fixture: ComponentFixture<AppComponent>;
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
@@ -83,15 +85,36 @@ describe('AppComponent', () => {
     ).compileComponents();
   }));
 
+  afterEach(() => {
+    fixture.debugElement.nativeElement.remove();
+    fixture.destroy();
+  });
+
   it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
+    fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   });
 
   it(`should have as title 'The Mystery of the Three Bots'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
+    fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app.title).toEqual('The Mystery of the Three Bots');
   });
+
+  it('should load the models', inject([BotResponseService], (responseService: BotResponseService) => {
+    spyOn(responseService, 'loadModels').and.callThrough();
+    fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    expect(responseService.loadModels).toHaveBeenCalled();
+  }));
+
+  it('should initialize state', inject([BotResponseService], (responseService: BotResponseService) => {
+    spyOn(responseService, 'setState').and.callThrough();
+    fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    expect(responseService.setState).toHaveBeenCalledWith({
+      chef: 'initial',
+    });
+  }));
 });
