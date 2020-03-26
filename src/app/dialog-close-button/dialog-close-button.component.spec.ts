@@ -38,4 +38,10 @@ describe('DialogCloseButtonComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should trigger a close-dialog event on click', () => {
+    spyOn(fixture.debugElement.nativeElement, 'dispatchEvent');
+    fixture.debugElement.nativeElement.querySelector('.button').click();
+    expect(fixture.debugElement.nativeElement.dispatchEvent).toHaveBeenCalledWith(new CustomEvent('close-dialog'));
+  });
 });
