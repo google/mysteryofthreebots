@@ -8,7 +8,7 @@ The game works by matching a representation of the player's input to precomputed
 
 ## Updating the models
 
-To update a model, changing the list of possible queries and responses, change the entries in the correponding bot's .csv file, then run `node ./generate_models.js` from the root directory of the project. This will update the JSON file under [./src/assets/models] which is read by the app to populate the models on the client side.
+To update a model, changing the list of possible queries and responses, change the entries in the correponding bot's .csv file, then run `node ./generate_models.js` from the root directory of the project. This will update the JSON file under [src/assets/models](./src/assets/models) which is read by the app to populate the models on the client side.
 
 ## How were the corpora created?
 
