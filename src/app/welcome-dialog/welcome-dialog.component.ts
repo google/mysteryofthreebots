@@ -14,7 +14,7 @@
  *  limitations under the License.
  */
 
-import { Component, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-welcome-dialog',
@@ -22,10 +22,5 @@ import { Component, ElementRef } from '@angular/core';
   styleUrls: ['./welcome-dialog.component.scss']
 })
 export class WelcomeDialogComponent {
-
-  constructor(private root: ElementRef) { }
-
-  handleContinueClick() {
-    this.root.nativeElement.dispatchEvent(new CustomEvent('close-dialog'));
-  }
+  constructor() { }
 }

@@ -22,6 +22,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./map-dialog.component.scss']
 })
 export class MapDialogComponent {
-
   constructor() { }
 }
