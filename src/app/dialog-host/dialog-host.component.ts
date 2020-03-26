@@ -14,7 +14,7 @@
  *  limitations under the License.
  */
 
-import { Component, ViewChild, ElementRef, HostListener } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { DialogService } from '../dialog.service';
 
 @Component({
