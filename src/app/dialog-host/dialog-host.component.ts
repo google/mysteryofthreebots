@@ -27,14 +27,9 @@ export class DialogHostComponent {
 
   constructor(private readonly dialogService: DialogService) { }
 
-
   handleBackdropClick(event: any) {
     if (event.target === this.backdrop.nativeElement) {
       this.dialogService.close();
     }
-  }
-
-  handleCloseClick() {
-    this.dialogService.close();
   }
 }

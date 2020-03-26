@@ -14,9 +14,10 @@
  *  limitations under the License.
  */
 
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed, inject } from '@angular/core/testing';
 
 import { DialogHostComponent } from './dialog-host.component';
+import { DialogService } from '../dialog.service';
 
 describe('DialogHostComponent', () => {
   let component: DialogHostComponent;
@@ -38,4 +39,13 @@ describe('DialogHostComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should close dialog on clickng backdrop', inject(
+    [DialogService],
+    (dialogService: DialogService) => {
+      spyOn(dialogService, 'close');
+      fixture.debugElement.nativeElement.querySelector('.app-dialog-backdrop').click();
+      expect(dialogService.close).toHaveBeenCalled();
+    }
+  ));
 });
