@@ -6,6 +6,10 @@
     flex-direction: column;
     align-items: center;
 
+    .notebook {
+        background-image: url(../../assets/images/notebook.png);
+    }
+
     .page__header {
         color: #931010;
         font-weight: normal;

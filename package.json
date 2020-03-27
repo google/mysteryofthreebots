@@ -22,6 +22,7 @@
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "^9.0.4",
     "@tensorflow/tfjs": "^1.5.2",
+    "angular-cli-ghpages": "^0.6.2",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"

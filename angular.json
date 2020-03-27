@@ -103,14 +103,19 @@
           "options": {
             "tsConfig": [
               "tsconfig.app.json",
-              "tsconfig.spec.json",
+              "tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
             ]
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "mysteryofthethreebots"
 }
