@@ -1,10 +1,21 @@
 # Mystery of the Three Bots
 
+[Play here](https://google.github.io/mysteryofthreebots/)
+
 Mystery of the Three Bots is a simple dialog-based game utilizing machine learning to enable you to communicate with three characters. The goal is to determine which of several guests stole the precious MacGuffin Diamond. You interrogate the butler, the maid and the chef--three robot servants who were present during the crime.
 
 The game is built as an Angular app in Typescript. The machine learning model uses a Javascript implementation of the [Universal Sentence Encoder Lite](https://tfhub.dev/google/universal-sentence-encoder-lite/2), which it preloads using JSON files that were generated from CSV files ([butler.csv](./butler.csv), [maid.csv](./maid.csv), [chef.csv](./chef.csv)) for each of the characters (see [generate_models.js](./generate_models.js)).
 
 The game works by matching a representation of the player's input to precomputed representations of candidate strings and calculates a similarity score. For example, if the player types "Where'd the diamond go?", the game might determine that it has a similarity of 0.86 to "Where is the diamond?", and if that's a greater score than the other candidates, the game will use that as the question to the bot and return the corresponding response. See `getResponse()` in [BotResponseService](./src/app/bot-response.service.ts) for implementation.
+
+## Getting started
+
+To run locally:
+
+1. Clone this repo
+2. Run `npm install` in a terminal
+3. Run `npm start` in a terminal
+4. Open the URL that is output
 
 ## Updating the models
 
