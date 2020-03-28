@@ -9,7 +9,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "gcp-build": "npm run build",
-    "generate-models": "node ./generate_models.js"
+    "generate-models": "node ./generate_models.js",
+    "deploy": "ng deploy"
   },
   "private": true,
   "dependencies": {
