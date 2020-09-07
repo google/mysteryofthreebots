@@ -45,7 +45,7 @@ try {
   styleUrls: ['./interview-pane.component.scss']
 })
 export class InterviewPaneComponent implements AfterViewChecked, AfterViewInit, OnDestroy {
-  @ViewChild('messageContainer', {static: false}) private scrollContainer: ElementRef;
+  @ViewChild('messageContainer') private scrollContainer: ElementRef;
   @HostBinding('attr.data-bot-name') @Input() botName: BotName;
   question = '';
   messages: IMessage[] = [];
