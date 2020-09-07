@@ -23,7 +23,7 @@ import { DialogService } from '../dialog.service';
   styleUrls: ['./dialog-host.component.scss']
 })
 export class DialogHostComponent {
-  @ViewChild('backdrop', {static: false}) backdrop: ElementRef;
+  @ViewChild('backdrop') backdrop: ElementRef;
 
   constructor(private readonly dialogService: DialogService) { }
 
